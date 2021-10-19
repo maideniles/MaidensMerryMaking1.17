@@ -1,0 +1,65 @@
+{
+
+"itemGroup.maidens_blocks_group": "MerryMaking Blocks Tab",
+"itemGroup.maidens_items_group": "MerryMaking Items Tab",
+
+
+
+"item.maidensmerrymaking.christmas_tree": "Christmas Tree",
+"item.maidensmerrymaking.christmas_tree_white_lights": "Christmas Tree Lights White",
+"item.maidensmerrymaking.christmas_tree_multi_lights": "Christmas Tree Lights Multi",
+"item.maidensmerrymaking.roof_tiles": "Roof Tiles",
+"item.maidensmerrymaking.green_wires": "Green Wires",
+"item.maidensmerrymaking.white_wires": "White Wires",
+"item.maidensmerrymaking.multi_bulbs": "Multi Bulbs",
+"item.maidensmerrymaking.white_bulbs": "White Bulbs",
+"item.maidensmerrymaking.classic_bulbs_white": "Classic Bulbs White",
+"item.maidensmerrymaking.classic_bulbs_multi": "Classic Bulbs Multi",
+"item.maidensmerrymaking.mini_bulbs_multi": "Mini Bulbs Multi",
+"item.maidensmerrymaking.mini_bulbs_white": "Mini Bulbs White",
+"item.maidensmerrymaking.icicle_bulbs_white": "Icicle Bulbs White",
+"item.maidensmerrymaking.icicle_bulbs_multi": "Icicle Bulbs Multi",
+"item.maidensmerrymaking.twinkling_icicle_bulbs_multi": "Twinkling Icicle Bulbs Multi",
+"item.maidensmerrymaking.twinkling_icicle_bulbs_white": "Twinkling Icicle Bulbs White",
+
+"item.maidensmerrymaking.classic_lights_white": "Classic Lights White",
+"item.maidensmerrymaking.classic_lights_multi": "Classic Lights Multi",
+"item.maidensmerrymaking.mini_lights_multi": "Mini Lights Multi",
+"item.maidensmerrymaking.mini_lights_white": "Mini Lights White",
+"item.maidensmerrymaking.icicle_lights_white": "Icicle Lights White",
+"item.maidensmerrymaking.icicle_lights_multi": "Icicle Lights Multi",
+"item.maidensmerrymaking.twinkling_lights_multi": "Twinkling Icicle Lights Multi",
+"item.maidensmerrymaking.twinkling_lights_white": "Twinkling Icicle Lights White",
+
+"item.maidensmerrymaking.mug": "Mug",
+"item.maidensmerrymaking.star": "Star",
+"item.maidensmerrymaking.bow": "Bow",
+"item.maidensmerrymaking.stocking": "Christmas Stocking",
+"item.maidensmerrymaking.mint_seeds": "Mint Seeds",
+"item.maidensmerrymaking.peppermint_extract": "Peppermint Extract",
+"item.maidensmerrymaking.bottle_of_mint": "Bottle of Mint",
+"item.maidensmerrymaking.ginger_tuber": "Ginger Tuber",
+"item.maidensmerrymaking.mint_leaf": "Mint Leaf",
+
+"item.maidensmerrymaking.ground_ginger": "Ground Ginger",
+"item.maidensmerrymaking.gingerbread_dough": "Gingerbread Dough",
+"item.maidensmerrymaking.cookie_dough": "Cookie Dough",
+"item.maidensmerrymaking.gingerbread_cookie": "Gingerbread Cookie",
+"item.maidensmerrymaking.christmas_cookie_tree": "Christmas Tree Cookie",
+"item.maidensmerrymaking.christmas_cookie_stocking": "Christmas Stocking Cookie",
+"item.maidensmerrymaking.christmas_cookie_mitten": "Christmas Mitten Cookie",
+"item.maidensmerrymaking.fudge": "Fudge",
+"item.maidensmerrymaking.egg_nog": "Egg Nog",
+"item.maidensmerrymaking.hot_cocoa": "Hot Cocoa",
+"item.maidensmerrymaking.peppermint_cocoa": "Peppermint Hot Cocoa",
+"item.maidensmerrymaking.candy_cane": "Candy Cane",
+"item.maidensmerrymaking.icing": "Icing",
+"item.maidensmerrymaking.fruitcake": "Fruitcake",
+	
+	
+	
+	
+	"block.maidensmerrymaking.mint_plant": "Mint Seeds",
+	"block.maidensmerrymaking.ginger_plant": "Ginger Root"
+
+}
