@@ -118,10 +118,10 @@ public class MantelTopLeftStocking extends HorizontalDecoBlock {
 
         if (state.getValue(MantelTopLeftStocking.FACING) == Direction.NORTH) {
 
-            if ( top_left == level.getBlockState(pos).getValue(MantelTopLeftStocking.STOCKING)) {
+           /* if ( top_left == level.getBlockState(pos).getValue(MantelTopLeftStocking.STOCKING)) {
                 popResource(level, pos, new ItemStack(ModItems.STOCKING.get()));
                 System.out.println("DROPPED STOCKING FROM TOP LEFT");
-            }
+            }*/
 
             if (top_middle == level.getBlockState(pos.east()).getValue(MantelTopCenterStocking.STOCKING)) {
                 popResource(level, pos, new ItemStack(ModItems.STOCKING.get()));
