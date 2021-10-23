@@ -10,6 +10,7 @@
         "facing=south,stocking=false": {"model": "maidensmerrymaking:block/mantel_acacia_top_middle", "y": 90}, 
         "facing=west,stocking=false": {"model": "maidensmerrymaking:block/mantel_acacia_top_middle", "y": 180  },
         "facing=east,stocking=false": {"model": "maidensmerrymaking:block/mantel_acacia_top_middle" , "y": 0 }
+		
         
         
    }

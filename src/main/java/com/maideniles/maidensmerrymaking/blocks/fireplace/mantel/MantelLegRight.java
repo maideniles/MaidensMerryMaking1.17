@@ -1,9 +1,11 @@
-package com.maideniles.maidensmerrymaking.blocks.fireplace.mantel.single;
+package com.maideniles.maidensmerrymaking.blocks.fireplace.mantel;
 
 import com.maideniles.maidensmerrymaking.blocks.deco.HorizontalDecoBlock;
+import com.maideniles.maidensmerrymaking.init.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
@@ -49,8 +51,28 @@ public class MantelLegRight extends HorizontalDecoBlock {
     @Override
     public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
 
+        Boolean top_left = Boolean.TRUE;
+        Boolean top_middle = Boolean.TRUE;
+        Boolean top_right = Boolean.TRUE;
+
+
 
         if (state.getValue(MantelLegRight.FACING) == Direction.NORTH) {
+
+            if ( top_right == level.getBlockState(pos.above()).getValue(MantelTopRightStocking.STOCKING)) {
+                popResource(level, pos, new ItemStack(ModItems.STOCKING.get()));
+                System.out.println("DROPPED STOCKING FROM TOP RIGHT");
+            }
+
+            if (top_middle == level.getBlockState(pos.above().west()).getValue(MantelTopCenterStocking.STOCKING)) {
+                popResource(level, pos, new ItemStack(ModItems.STOCKING.get()));
+                System.out.println("DROPPED STOCKING FROM TOP MIDDLE");
+            }
+
+            if (top_left == level.getBlockState(pos.above().west(2)).getValue(MantelTopLeftStocking.STOCKING)) {
+                popResource(level, pos, new ItemStack(ModItems.STOCKING.get()));
+                System.out.println("DROPPED STOCKING FROM TOP LEFT");
+            }
 
             //destroy block above//
             level.setBlock(pos.above(), Blocks.AIR.defaultBlockState(), 35);
@@ -64,6 +86,21 @@ public class MantelLegRight extends HorizontalDecoBlock {
 
         if (state.getValue(MantelLegRight.FACING) == Direction.SOUTH) {
 
+            if ( top_left == level.getBlockState(pos.above()).getValue(MantelTopLeftStocking.STOCKING)) {
+                popResource(level, pos, new ItemStack(ModItems.STOCKING.get()));
+                System.out.println("DROPPED STOCKING FROM TOP LEFT");
+            }
+
+            if (top_middle == level.getBlockState(pos.above().east()).getValue(MantelTopCenterStocking.STOCKING)) {
+                popResource(level, pos, new ItemStack(ModItems.STOCKING.get()));
+                System.out.println("DROPPED STOCKING FROM TOP MIDDLE");
+            }
+
+            if (top_right == level.getBlockState(pos.above().east(2)).getValue(MantelTopRightStocking.STOCKING)) {
+                popResource(level, pos, new ItemStack(ModItems.STOCKING.get()));
+                System.out.println("DROPPED STOCKING FROM TOP RIGHT");
+            }
+
             //destroy block above//
             level.setBlock(pos.above(), Blocks.AIR.defaultBlockState(), 35);
             //destroy block 1 block above and to left//
@@ -76,6 +113,21 @@ public class MantelLegRight extends HorizontalDecoBlock {
 
         if (state.getValue(MantelLegRight.FACING) == Direction.EAST) {
 
+            if ( top_left == level.getBlockState(pos.above()).getValue(MantelTopLeftStocking.STOCKING)) {
+                popResource(level, pos, new ItemStack(ModItems.STOCKING.get()));
+                System.out.println("DROPPED STOCKING FROM TOP LEFT");
+            }
+
+            if (top_middle == level.getBlockState(pos.above().north()).getValue(MantelTopCenterStocking.STOCKING)) {
+                popResource(level, pos, new ItemStack(ModItems.STOCKING.get()));
+                System.out.println("DROPPED STOCKING FROM TOP MIDDLE");
+            }
+
+            if (top_right == level.getBlockState(pos.above().north(2)).getValue(MantelTopRightStocking.STOCKING)) {
+                popResource(level, pos, new ItemStack(ModItems.STOCKING.get()));
+                System.out.println("DROPPED STOCKING FROM TOP RIGHT");
+            }
+
             //destroy block above//
             level.setBlock(pos.above(), Blocks.AIR.defaultBlockState(), 35);
             //destroy block 1 block above and to left//
@@ -87,6 +139,21 @@ public class MantelLegRight extends HorizontalDecoBlock {
         }
 
         if (state.getValue(MantelLegRight.FACING) == Direction.WEST) {
+
+            if ( top_left == level.getBlockState(pos.above()).getValue(MantelTopLeftStocking.STOCKING)) {
+                popResource(level, pos, new ItemStack(ModItems.STOCKING.get()));
+                System.out.println("DROPPED STOCKING FROM TOP LEFT");
+            }
+
+            if (top_middle == level.getBlockState(pos.above().south()).getValue(MantelTopCenterStocking.STOCKING)) {
+                popResource(level, pos, new ItemStack(ModItems.STOCKING.get()));
+                System.out.println("DROPPED STOCKING FROM TOP MIDDLE");
+            }
+
+            if (top_right == level.getBlockState(pos.above().south(2)).getValue(MantelTopRightStocking.STOCKING)) {
+                popResource(level, pos, new ItemStack(ModItems.STOCKING.get()));
+                System.out.println("DROPPED STOCKING FROM TOP RIGHT");
+            }
 
             //destroy block above//
             level.setBlock(pos.above(), Blocks.AIR.defaultBlockState(), 35);
