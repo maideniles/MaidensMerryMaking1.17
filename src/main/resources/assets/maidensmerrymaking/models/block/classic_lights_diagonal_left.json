@@ -2,7 +2,8 @@
 	"credit": "Made with Blockbench",
 	"parent": "block/block",
 	"textures": {
-		"2": "maidensmerrymaking:block/white_lights_diagonal_turn"
+		"2": "maidensmerrymaking:block/white_lights_diagonal_turn",
+		"particle": "maidensmerrymaking:block/green_wire_flat"
 	},
 	"elements": [
 		{

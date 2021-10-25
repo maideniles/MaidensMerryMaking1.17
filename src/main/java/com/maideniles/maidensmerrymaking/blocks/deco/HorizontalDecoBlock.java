@@ -29,7 +29,7 @@ public abstract class HorizontalDecoBlock extends Block {
 
     @Override
     public BlockState getStateForPlacement(BlockPlaceContext p_49573_) {
-        return this.defaultBlockState().setValue(FACING, p_49573_.getHorizontalDirection().getOpposite());
+        return this.defaultBlockState().setValue(FACING, p_49573_.getHorizontalDirection());
     }
 
     @Override

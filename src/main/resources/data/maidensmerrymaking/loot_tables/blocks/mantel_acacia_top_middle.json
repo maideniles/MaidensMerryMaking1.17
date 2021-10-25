@@ -8,6 +8,11 @@
           "type": "minecraft:item",
           "name": "maidensmerrymaking:mantel_normal_acacia"
         }
+      ],
+      "conditions": [
+        {
+          "condition": "minecraft:survives_explosion"
+        }
       ]
     }
   ]
