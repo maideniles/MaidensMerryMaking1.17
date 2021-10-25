@@ -2,6 +2,7 @@ package com.maideniles.maidensmerrymaking.init;
 
 import com.maideniles.maidensmerrymaking.MaidensMerryMaking;
 import com.maideniles.maidensmerrymaking.blocks.*;
+import com.maideniles.maidensmerrymaking.blocks.crop.CornStalkBlock;
 import com.maideniles.maidensmerrymaking.blocks.crop.GingerPlant;
 import com.maideniles.maidensmerrymaking.blocks.crop.MintPlant;
 import com.maideniles.maidensmerrymaking.blocks.deco.MantelDecoBlock;
@@ -40,6 +41,9 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> MINT_PLANT = BLOCKS.register("mint_plant",
             () -> new MintPlant(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+
+    public static final RegistryObject<Block> CORN_STALK = BLOCKS.register("corn_stalk",
+            () -> new CornStalkBlock(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
 
     public static final RegistryObject<Block> GINGER_PLANT = BLOCKS.register("ginger_plant",
             () -> new GingerPlant(BlockBehaviour.Properties.copy(Blocks.WHEAT)));

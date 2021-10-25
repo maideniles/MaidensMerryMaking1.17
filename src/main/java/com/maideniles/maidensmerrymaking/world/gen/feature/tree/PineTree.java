@@ -10,39 +10,23 @@ import net.minecraft.world.level.levelgen.feature.Feature;
 import net.minecraft.world.level.levelgen.feature.FeaturePlaceContext;
 import net.minecraft.world.level.levelgen.feature.configurations.NoneFeatureConfiguration;
 
-public class ChristmasPineTree extends Feature<NoneFeatureConfiguration> {
-
-    public ChristmasPineTree(Codec<NoneFeatureConfiguration> codec) {
+public class PineTree extends Feature<NoneFeatureConfiguration> {
+    public PineTree(Codec<NoneFeatureConfiguration> codec) {
         super(codec);
     }
-
-
-    private final int maxHeight = 20;
-
-
     @Override
-    public boolean place(FeaturePlaceContext<NoneFeatureConfiguration> pContext) {
+        public boolean place(FeaturePlaceContext<NoneFeatureConfiguration> pContext) {
         BlockPos blockpos = pContext.origin();
-
-
         WorldGenLevel worldgenlevel = pContext.level();
 
-
         this.setBlock( worldgenlevel, blockpos, ModBlocks.TREE.get().defaultBlockState());
-
         this.setBlock(worldgenlevel, blockpos.offset(0,1,0), ModBlocks.TREE_MIDDLE.get().defaultBlockState());
-
         this.setBlock(worldgenlevel, blockpos.offset(0, 2, 0), ModBlocks.TREE_TOP.get().defaultBlockState());
-
-
         return true;
     }
-
     protected void setBlock(LevelWriter level, BlockPos pos, BlockState state) {
         level.setBlock(pos, state, 3);
     }
-
-
 }
 
 

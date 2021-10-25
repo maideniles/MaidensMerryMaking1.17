@@ -283,6 +283,7 @@ public class RenderLayers {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BOW_TOPPER.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.STAR_TOPPER.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_TREE_STAND.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CORN_STALK.get(), RenderType.cutoutMipped());
 
 
 
