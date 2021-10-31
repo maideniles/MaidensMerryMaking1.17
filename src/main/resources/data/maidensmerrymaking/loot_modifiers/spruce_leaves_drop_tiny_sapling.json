@@ -1,16 +1,13 @@
 {
-	"conditions": [
-	  {
-		"condition": "block_state_property",
-		"block": "minecraft:spruce_leaves"
-	  }	
-	
-	],
-	
-	"item": "minecraft:stick",
-	"count": 1,
-	"replacement": "maidensmerrymaking:spruce_seeds"
-	
+  "conditions": [
+    {
+      "condition": "block_state_property",
+      "block":"minecraft:spruce_leaves"
+    }
+  ],
+  "seedItem": "minecraft:stick",
+  "numSeeds": 1,
+  "replacement": "maidensmerrymaking:spruce_seeds"
 }
 	
 	
