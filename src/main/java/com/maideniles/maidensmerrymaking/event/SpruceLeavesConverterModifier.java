@@ -2,6 +2,7 @@ package com.maideniles.maidensmerrymaking.event;
 
 
 import com.google.gson.JsonObject;
+import com.maideniles.maidensmerrymaking.init.ModItems;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.util.GsonHelper;
 import net.minecraft.world.item.Item;
@@ -56,8 +57,8 @@ public class SpruceLeavesConverterModifier extends LootModifier {
         public SpruceLeavesConverterModifier read(ResourceLocation name, JsonObject object, LootItemCondition[] conditions) {
             int numSeeds = GsonHelper.getAsInt(object, "numSeeds");
             Item seed = ForgeRegistries.ITEMS.getValue(new ResourceLocation((GsonHelper.getAsString(object, "seedItem"))));
-            Item wheat = ForgeRegistries.ITEMS.getValue(new ResourceLocation(GsonHelper.getAsString(object, "replacement")));
-            return new SpruceLeavesConverterModifier(conditions, numSeeds, seed, wheat);
+            Item spruce_seeds = ForgeRegistries.ITEMS.getValue(new ResourceLocation(GsonHelper.getAsString(object, "replacement")));
+            return new SpruceLeavesConverterModifier(conditions, numSeeds, seed, spruce_seeds);
         }
 
         @Override
