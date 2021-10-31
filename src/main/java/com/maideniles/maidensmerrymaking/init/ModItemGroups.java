@@ -9,14 +9,14 @@ public class ModItemGroups {
     public static final CreativeModeTab MAIDENS_BLOCKS_GROUP = new CreativeModeTab("maidens_blocks_group") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModBlocks.MINT_PLANT.get());
+            return new ItemStack(ModBlocks.CHRISTMAS_WREATH_MULTI_LIGHTS.get());
         }
     };
 
     public static final CreativeModeTab MAIDENS_ITEMS_GROUP = new CreativeModeTab("maidens_items_group") {
         @Override
         public ItemStack makeIcon() {
-            return new ItemStack(ModItems.MINT_SEEDS.get());
+            return new ItemStack(ModItems.MINI_LIGHTS_MULTI.get());
         }
     };
 

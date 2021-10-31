@@ -285,6 +285,22 @@ public class RenderLayers {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_TREE_STAND.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CORN_STALK.get(), RenderType.cutoutMipped());
 
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.KINARA.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.KINARA_LIT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MKEKA_WITH_KINARA_LIT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MKEKA_WITH_KINARA.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MKEKA_WITH_CHALICE.get(),RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHALICE.get(),RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MKEKA.get(),RenderType.cutoutMipped());
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MENORAH.get(),RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MENORAH_LIT.get(),RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DREIDEL.get(),RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GELT.get(),RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.TINY_SPRUCE.get(),RenderType.cutoutMipped());
+
+
+
 
 
 

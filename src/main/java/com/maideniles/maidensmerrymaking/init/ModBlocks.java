@@ -4,10 +4,10 @@ import com.maideniles.maidensmerrymaking.MaidensMerryMaking;
 import com.maideniles.maidensmerrymaking.blocks.*;
 import com.maideniles.maidensmerrymaking.blocks.crop.CornStalkBlock;
 import com.maideniles.maidensmerrymaking.blocks.crop.GingerPlant;
+import com.maideniles.maidensmerrymaking.blocks.crop.GrowableTinySpruce;
 import com.maideniles.maidensmerrymaking.blocks.crop.MintPlant;
-import com.maideniles.maidensmerrymaking.blocks.deco.MantelDecoBlock;
-import com.maideniles.maidensmerrymaking.blocks.deco.TopperBlock;
-import com.maideniles.maidensmerrymaking.blocks.deco.WreathBlock;
+import com.maideniles.maidensmerrymaking.blocks.deco.*;
+
 
 import com.maideniles.maidensmerrymaking.blocks.fireplace.logs.Fireplace;
 import com.maideniles.maidensmerrymaking.blocks.fireplace.logs.FireplaceLogsOn;
@@ -48,6 +48,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> GINGER_PLANT = BLOCKS.register("ginger_plant",
             () -> new GingerPlant(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
 
+    public static final RegistryObject<Block>   TINY_SPRUCE = registerBlock("tiny_spruce",
+            () -> new GrowableTinySpruce(Block.Properties.of(Material.PLANT).strength(0.5F).noOcclusion()) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
 
     public static final RegistryObject<Block> CHRISTMAS_WREATH = registerBlock("christmas_wreath",
             () -> new WreathBlock(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F).sound(SoundType.MOSS_CARPET)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
@@ -78,6 +82,53 @@ public class ModBlocks {
 
     public static final RegistryObject<Block>   TREE_TOP = registerBlock("christmas_pine_top",
             () -> new PineTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F)) , null);
+
+    //HARVEST TRAY//
+    public static final RegistryObject<Block> HARVEST_TRAY = registerBlock("harvest_tray",
+           ()-> new TrayBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.0F).noOcclusion()),ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> COOKIE_TRAY = registerBlock("cookie_tray",
+            ()-> new TrayBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.0F).noOcclusion()),ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    //KINARA//
+        public static final RegistryObject<Block> KINARA = registerBlock("kinara",
+            ()-> new KinaraBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F).noOcclusion()),ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> KINARA_LIT = registerBlock("kinara_lit",
+            ()-> new KinaraBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F).noOcclusion().lightLevel((p_50828_) -> { return 10; })),ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> CHALICE = registerBlock("chalice",
+            ()-> new ChaliceBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F).noOcclusion()),ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    //MKEKA BLOCKS//
+
+    public static final RegistryObject<Block> MKEKA = registerBlock("mkeka",
+            ()-> new MkekaBlock(BlockBehaviour.Properties.of(Material.CLOTH_DECORATION).strength(1.5F).noOcclusion().sound(SoundType.WOOL)),ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> MKEKA_WITH_KINARA = registerBlock("mkeka_with_kinara",
+            ()-> new MkekaWithKinaraBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F).noOcclusion()),ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> MKEKA_WITH_KINARA_LIT = registerBlock("mkeka_with_kinara_lit",
+            ()-> new MkekaWithKinaraBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F).noOcclusion().lightLevel((p_50828_) -> { return 10; })),ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> MKEKA_WITH_CHALICE = registerBlock("mkeka_with_chalice",
+            ()-> new MkekaWithChaliceBlock(BlockBehaviour.Properties.of(Material.CLOTH_DECORATION).noOcclusion().sound(SoundType.WOOL).strength(1.5F)),ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    //MENORAH BLOCKS//
+
+    public static final RegistryObject<Block> MENORAH = registerBlock("menorah",
+            ()-> new MenorahBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F).noOcclusion()),ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> MENORAH_LIT = registerBlock("menorah_lit",
+            ()-> new MenorahBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F).noOcclusion().lightLevel((p_50828_) -> { return 10; })),ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    //DREIDEL//
+    public static final RegistryObject<Block> DREIDEL = registerBlock("dreidel",
+            ()-> new DreidelBlock(BlockBehaviour.Properties.of(Material.CLAY).strength(2.5F).noOcclusion()),ModItemGroups.MAIDENS_BLOCKS_GROUP);
+//GELT//
+public static final RegistryObject<Block> GELT = registerBlock("gelt",
+        ()-> new GeltBlock(BlockBehaviour.Properties.of(Material.METAL).strength(2.5F).noOcclusion()),ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
 
     //CHRISTMAS TREE//
 
@@ -290,8 +341,8 @@ public class ModBlocks {
     public static final RegistryObject<Block>  FIREPLACE_LOGS = registerBlock("fireplace_logs",
             () -> new Fireplace(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F).noOcclusion()), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
-    public static final RegistryObject<Block> FIREPLACE_LOGS_ON = BLOCKS.register("fireplace_logs_on",
-            () -> new FireplaceLogsOn(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F).noOcclusion().lightLevel((p_50828_) -> { return 12; })));
+    public static final RegistryObject<Block> FIREPLACE_LOGS_ON = registerBlock("fireplace_logs_on",
+            () -> new FireplaceLogsOn(BlockBehaviour.Properties.of(Material.WOOD).strength(2.5F).noOcclusion().lightLevel((p_50828_) -> { return 12; })),null);
 
 
     //LAMP POSTS//

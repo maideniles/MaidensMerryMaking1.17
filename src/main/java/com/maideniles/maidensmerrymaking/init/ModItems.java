@@ -99,11 +99,23 @@ public class ModItems {
     public static final RegistryObject<Item>CORN = ITEMS.register("corn",
             () -> new Item(new Item.Properties().food(Foods.APPLE).tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
 
+    public static final RegistryObject<Item>SPRUCE_SEEDS = ITEMS.register("spruce_seeds",
+            () -> new Item(new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
+
 
 
     public static final RegistryObject<Item> CORN_KERNELS = ITEMS.register("corn_kernels",
             () -> new BlockItem(ModBlocks.CORN_STALK.get(), new Item.Properties()
                     .food(new FoodProperties.Builder().nutrition(1).saturationMod(0.1f).build()).tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
+
+    //HANUKKAH TREAT//
+    public static final RegistryObject<Item> RUGELACH = ITEMS.register("rugelach",
+            ()-> new Item( new Item.Properties().food(Foods.APPLE).tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
+
+    //KWANZAA TREAT//
+
+
+
 
     //CHRISTMAS TREATS AND INGREDIENTS//
     public static final RegistryObject<Item>TREE_CHRISTMAS_COOKIE = ITEMS.register("tree_christmas_cookie",
@@ -155,6 +167,7 @@ public class ModItems {
 
     public static final RegistryObject<Item> BOTTLE_OF_MINT = ITEMS.register("bottle_of_mint",
             () -> new MintBottleItem(new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
+
 
 
     public static void register(IEventBus eventBus) {

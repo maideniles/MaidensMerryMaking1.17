@@ -2,7 +2,6 @@ package com.maideniles.maidensmerrymaking;
 
 import com.maideniles.maidensmerrymaking.client.RenderLayers;
 import com.maideniles.maidensmerrymaking.init.ModBlocks;
-import com.maideniles.maidensmerrymaking.init.ModFeatures;
 import com.maideniles.maidensmerrymaking.init.ModItems;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;

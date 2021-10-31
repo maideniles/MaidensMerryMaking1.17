@@ -18,11 +18,11 @@
                   }
                 }
               ],
-              "name": "maidensmerrymaking:ginger_tuber"
+              "name": "maidensmerrymaking:ginger_root"
             },
             {
               "type": "minecraft:item",
-              "name": "maidensmerrymaking:ginger_tuber"
+              "name": "maidensmerrymaking:ginger_root"
             }
           ]
         }
@@ -44,7 +44,7 @@
               }
             }
           ],
-          "name": "maidensmerrymaking:ginger_tuber"
+          "name": "maidensmerrymaking:ginger_root"
         }
       ],
       "conditions": [
