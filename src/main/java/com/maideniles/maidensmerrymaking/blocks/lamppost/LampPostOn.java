@@ -79,6 +79,7 @@ public class LampPostOn extends HorizontalDecoBlock {
                 System.out.println("DARKNESS FALLS!");
                 level.setBlock(pos, ModBlocks.LAMP_POST.get().defaultBlockState().setValue(FACING, state.getValue(FACING)),3);
                 torch.shrink(1);
+                player.setItemInHand(handIn, new ItemStack(Items.TORCH));
             }
         }
         return InteractionResult.FAIL;

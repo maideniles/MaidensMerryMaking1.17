@@ -18,7 +18,7 @@ import net.minecraftforge.common.property.Properties;
 
 public class TreeStandBlock extends Block {
 
-    protected static final VoxelShape SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 8.0D, 14.0D);
+    protected static final VoxelShape SHAPE = Block.box(3.0D, 0.0D, 3.0D, 13.0D, 3.0D, 13.0D);
 
 
 

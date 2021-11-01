@@ -1,6 +1,7 @@
 package com.maideniles.maidensmerrymaking.blocks.fireplace.mantel.woods;
 
 import com.maideniles.maidensmerrymaking.blocks.deco.HorizontalDecoBlock;
+import com.maideniles.maidensmerrymaking.blocks.fireplace.mantel.base.HorizontalMantelBase;
 import com.maideniles.maidensmerrymaking.blocks.fireplace.mantel.base.MantelTopCenterStocking;
 import com.maideniles.maidensmerrymaking.blocks.fireplace.mantel.base.MantelTopLeftStocking;
 import com.maideniles.maidensmerrymaking.blocks.fireplace.mantel.base.MantelTopRightStocking;
@@ -15,7 +16,7 @@ import net.minecraft.world.level.block.state.BlockState;
 
 import javax.annotation.Nullable;
 
-public class MantelBlockCrimson extends HorizontalDecoBlock {
+public class MantelBlockCrimson extends HorizontalMantelBase {
     public MantelBlockCrimson(Properties properties) {
         super(properties);
     }

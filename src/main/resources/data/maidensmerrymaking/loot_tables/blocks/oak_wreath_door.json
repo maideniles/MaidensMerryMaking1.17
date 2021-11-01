@@ -6,6 +6,15 @@
       "entries": [
         {
           "type": "minecraft:item",
+          "conditions": [
+            {
+              "condition": "minecraft:block_state_property",
+              "block": "maidensmerrymaking:oak_wreath_door",
+              "properties": {
+                "half": "lower"
+              }
+            }
+          ],
           "name": "maidensmerrymaking:oak_wreath_door"
         }
       ],

@@ -2,6 +2,7 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"0": "maidensmerrymaking:block/leaves_white_lights_spruce",
+		"1": "block/spruce_log",
 		"particle": "maidensmerrymaking:block/leaves_white_lights_spruce"
 	},
 	"elements": [
@@ -173,26 +174,42 @@
 				"up": {"uv": [12, 6, 16, 10], "texture": "#0"},
 				"down": {"uv": [14, 6, 16, 10], "texture": "#0"}
 			}
+		},
+		{
+			"from": [6, 0.1, 6],
+			"to": [10, 15.9, 10],
+			"faces": {
+				"north": {"uv": [6, 0, 10, 16], "texture": "#1"},
+				"east": {"uv": [6, 0, 10, 16], "texture": "#1"},
+				"south": {"uv": [6, 0, 10, 16], "texture": "#1"},
+				"west": {"uv": [6, 0, 10, 16], "texture": "#1"},
+				"up": {"uv": [6, 6, 10, 10], "texture": "#1"},
+				"down": {"uv": [6, 6, 10, 10], "texture": "#1"}
+			}
 		}
 	],
 	"groups": [
 		{
 			"name": "bottom tier",
-			"shade": false,
 			"origin": [8, 8, 8],
+			"color": 0,
+			"shade": false,
 			"children": [0, 1, 2, 3, 4]
 		},
 		{
 			"name": "second tier",
-			"shade": false,
 			"origin": [8, 8, 8],
+			"color": 0,
+			"shade": false,
 			"children": [5, 6, 7, 8, 9, 10, 11, 12]
 		},
 		{
 			"name": "third tier",
-			"shade": false,
 			"origin": [8, 8, 8],
+			"color": 0,
+			"shade": false,
 			"children": []
-		}
+		},
+		13
 	]
 }

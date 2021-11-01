@@ -10,10 +10,10 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class MantelDecoBlock extends HorizontalDecoBlock {
 
-    protected static final VoxelShape MANTEL_WEST_AABB = Block.box(0.0D, 8.0D, 0.0D, 9.0D, 16.0D, 16.0D);
-    protected static final VoxelShape MANTEL_EAST_AABB = Block.box(7.0D, 8.0D, 0.0D, 16.0D, 16.0D, 16.0D);
-    protected static final VoxelShape MANTEL_NORTH_AABB = Block.box(0.0D, 8.0D, 0.0D, 16.0D, 16.0D, 9.0D);
-    protected static final VoxelShape MANTEL_SOUTH_AABB = Block.box(0.0D, 8.0D, 7.0D, 16.0D, 16.0D, 16.0D);
+    protected static final VoxelShape MANTEL_WEST_AABB = Block.box(0.0D, 0.0D, 0.0D, 9.0D, 12.0D, 16.0D);
+    protected static final VoxelShape MANTEL_EAST_AABB = Block.box(7.0D, 0.0D, 0.0D, 16.0D, 12.0D, 16.0D);
+    protected static final VoxelShape MANTEL_NORTH_AABB = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 12.0D, 9.0D);
+    protected static final VoxelShape MANTEL_SOUTH_AABB = Block.box(0.0D, 0.0D, 7.0D, 16.0D, 12.0D, 16.0D);
 
     public MantelDecoBlock(Properties properties) {
         super(properties);

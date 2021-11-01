@@ -17,6 +17,7 @@ public class RenderLayers {
 
         //LOGS//
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.FIREPLACE_LOGS.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.FIREPLACE_LOGS_ON.get(), RenderType.cutoutMipped());
         //LAMP POSTS//
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.LAMP_POST_POLE_WREATH.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.LAMP_POST_POLE_WREATH_MULTI.get(), RenderType.cutoutMipped());

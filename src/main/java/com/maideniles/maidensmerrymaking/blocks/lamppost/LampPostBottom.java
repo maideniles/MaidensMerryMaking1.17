@@ -51,20 +51,20 @@ public class LampPostBottom extends HorizontalDecoBlock {
         }
 
 
-        if (above.getBlock() instanceof LampPostPole && up2.getBlock() == ModBlocks.LAMP_POST.get() || up2.getBlock()== ModBlocks.LAMP_POST_ON.get()) {
+        if (above.getBlock() instanceof LampPostPole && up2.getBlock() == ModBlocks.LAMP_POST.get() ) {
 
             //PLACE BOTTOM UNDER LAMP
-            level.setBlock(pos, Blocks.AIR.defaultBlockState(),3);
+            level.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
             //MOVE LAMP DOWN
-            level.setBlock(pos.above(), Blocks.AIR.defaultBlockState(),3);
+            level.setBlock(pos.above(), Blocks.AIR.defaultBlockState(), 3);
             //CHANGE LAMP TO AIR
-            level.setBlock(pos.above().above(), Blocks.AIR.defaultBlockState(),3);
+            level.setBlock(pos.above().above(), Blocks.AIR.defaultBlockState(), 3);
 
+        }
+          //  popResource(level, pos, new ItemStack(Item.byBlock(ModBlocks.LAMP_POST.get()))); //SPAWN THE LAMP//
 
-            popResource(level, pos, new ItemStack(Item.byBlock(ModBlocks.LAMP_POST.get()))); //SPAWN THE LAMP//
-
-
-            popResource(level, pos, new ItemStack(Items.TORCH));//SPAWN THE TORCH//
+                if(up2.getBlock()== ModBlocks.LAMP_POST_ON.get()|| above.getBlock() == ModBlocks.LAMP_POST_ON.get()) {
+                    popResource(level, pos, new ItemStack(Items.TORCH));//SPAWN THE TORCH//}
 
         }
     }

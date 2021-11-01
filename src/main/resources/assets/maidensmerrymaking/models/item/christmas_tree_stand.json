@@ -7,8 +7,8 @@
             "scale": [ 0.5, 0.5, 0.5 ]
         },
         "gui": {
-            "rotation": [ 0, 180, 0 ],
-			"translation": [ 0, 0, 0 ]
+            "rotation": [ 12, 30, 0 ],
+			"translation": [ 0, 1.5, 0 ]
 			
         }
     }
