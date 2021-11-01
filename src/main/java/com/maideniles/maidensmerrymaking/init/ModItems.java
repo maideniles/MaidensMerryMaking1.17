@@ -99,10 +99,6 @@ public class ModItems {
     public static final RegistryObject<Item>CORN = ITEMS.register("corn",
             () -> new Item(new Item.Properties().food(Foods.APPLE).tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
 
-    public static final RegistryObject<Item>SPRUCE_SEEDS = ITEMS.register("spruce_seeds",
-            () -> new Item(new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
-
-
 
     public static final RegistryObject<Item> CORN_KERNELS = ITEMS.register("corn_kernels",
             () -> new BlockItem(ModBlocks.CORN_STALK.get(), new Item.Properties()
@@ -114,6 +110,12 @@ public class ModItems {
 
     //KWANZAA TREAT//
 
+    public static final RegistryObject<Item> SWEET_POTATO = ITEMS.register( "sweet_potato",
+            () ->  new BlockItem(ModBlocks.SWEET_POTATO_PLANT.get(), (new Item.Properties()).food(Foods.APPLE).tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
+
+
+    public static final RegistryObject<Item>SWEET_POTATO_PIE = ITEMS.register("sweet_potato_pie",
+            () -> new Item(new Item.Properties().food(Foods.PUMPKIN_PIE).tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
 
 
 

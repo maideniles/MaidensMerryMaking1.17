@@ -57,8 +57,8 @@ public class SpruceLeavesConverterModifier extends LootModifier {
         public SpruceLeavesConverterModifier read(ResourceLocation name, JsonObject object, LootItemCondition[] conditions) {
             int numSeeds = GsonHelper.getAsInt(object, "numSeeds");
             Item seed = ForgeRegistries.ITEMS.getValue(new ResourceLocation((GsonHelper.getAsString(object, "seedItem"))));
-            Item spruce_seeds = ForgeRegistries.ITEMS.getValue(new ResourceLocation(GsonHelper.getAsString(object, "replacement")));
-            return new SpruceLeavesConverterModifier(conditions, numSeeds, seed, spruce_seeds);
+            Item tiny_spruce = ForgeRegistries.ITEMS.getValue(new ResourceLocation(GsonHelper.getAsString(object, "replacement")));
+            return new SpruceLeavesConverterModifier(conditions, numSeeds, seed, tiny_spruce);
         }
 
         @Override

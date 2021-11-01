@@ -2,10 +2,7 @@ package com.maideniles.maidensmerrymaking.init;
 
 import com.maideniles.maidensmerrymaking.MaidensMerryMaking;
 import com.maideniles.maidensmerrymaking.blocks.*;
-import com.maideniles.maidensmerrymaking.blocks.crop.CornStalkBlock;
-import com.maideniles.maidensmerrymaking.blocks.crop.GingerPlant;
-import com.maideniles.maidensmerrymaking.blocks.crop.GrowableTinySpruce;
-import com.maideniles.maidensmerrymaking.blocks.crop.MintPlant;
+import com.maideniles.maidensmerrymaking.blocks.crop.*;
 import com.maideniles.maidensmerrymaking.blocks.deco.*;
 
 
@@ -48,8 +45,11 @@ public class ModBlocks {
     public static final RegistryObject<Block> GINGER_PLANT = BLOCKS.register("ginger_plant",
             () -> new GingerPlant(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
 
+    public static final RegistryObject<Block> SWEET_POTATO_PLANT = BLOCKS.register("sweet_potato_plant",
+            () -> new SweetPotatoPlant(BlockBehaviour.Properties.copy(Blocks.WHEAT)));
+
     public static final RegistryObject<Block>   TINY_SPRUCE = registerBlock("tiny_spruce",
-            () -> new GrowableTinySpruce(Block.Properties.of(Material.PLANT).strength(0.5F).noOcclusion()) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+            () -> new GrowableTinySpruce(Block.Properties.of(Material.PLANT).strength(0.5F).noOcclusion().sound(SoundType.CROP)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
 
 
@@ -75,13 +75,13 @@ public class ModBlocks {
 
     //blocks that make up the christmas pine feature//
     public static final RegistryObject<Block>   TREE = registerBlock("christmas_pine_bottom",
-            () -> new PineTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F)) , null);
+            () -> new PineTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).sound(SoundType.CROP)) , null);
 
     public static final RegistryObject<Block>   TREE_MIDDLE = registerBlock("christmas_pine_middle",
-            () -> new PineTreeMiddleBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F)) , null);
+            () -> new PineTreeMiddleBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).sound(SoundType.CROP)) , null);
 
     public static final RegistryObject<Block>   TREE_TOP = registerBlock("christmas_pine_top",
-            () -> new PineTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F)) , null);
+            () -> new PineTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).sound(SoundType.CROP)) , null);
 
     //HARVEST TRAY//
     public static final RegistryObject<Block> HARVEST_TRAY = registerBlock("harvest_tray",
@@ -137,33 +137,33 @@ public static final RegistryObject<Block> GELT = registerBlock("gelt",
 
 
     public static final RegistryObject<Block>   CHRISTMAS_TREE_BOTTOM = registerBlock("christmas_tree_bottom",
-            () -> new ChristmasTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F)) , null);
+            () -> new ChristmasTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().sound(SoundType.CROP)) , null);
 
     public static final RegistryObject<Block>   CHRISTMAS_TREE_MIDDLE = registerBlock("christmas_tree_middle",
-            () -> new ChristmasTreeMiddleBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F)) , null);
+            () -> new ChristmasTreeMiddleBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().sound(SoundType.CROP)) , null);
 
     public static final RegistryObject<Block>   CHRISTMAS_TREE_TOP = registerBlock("christmas_tree_top",
-            () -> new ChristmasTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F)) , null);
+            () -> new ChristmasTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().sound(SoundType.CROP)) , null);
 
     //CHRISTMAS TREE WHITE LIGHTS//
     public static final RegistryObject<Block>   CHRISTMAS_TREE_WHITE_LIGHTS_BOTTOM = registerBlock("christmas_tree_white_lights_bottom",
-            () -> new ChristmasTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F)) , null);
+            () -> new ChristmasTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
 
     public static final RegistryObject<Block>   CHRISTMAS_TREE_WHITE_LIGHTS_MIDDLE = registerBlock("christmas_tree_white_lights_middle",
-            () -> new ChristmasTreeMiddleBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F)) , null);
+            () -> new ChristmasTreeMiddleBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
 
     public static final RegistryObject<Block>   CHRISTMAS_TREE_WHITE_LIGHTS_TOP = registerBlock("christmas_tree_white_lights_top",
-            () -> new ChristmasTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F)) , null);
+            () -> new ChristmasTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
 
     //CHRISTMAS TREE MULTI LIGHTS//
     public static final RegistryObject<Block>   CHRISTMAS_TREE_MULTI_LIGHTS_BOTTOM = registerBlock("christmas_tree_multi_lights_bottom",
-            () -> new ChristmasTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F)) , null);
+            () -> new ChristmasTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
 
     public static final RegistryObject<Block>   CHRISTMAS_TREE_MULTI_LIGHTS_MIDDLE = registerBlock("christmas_tree_multi_lights_middle",
-            () -> new ChristmasTreeMiddleBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F)) , null);
+            () -> new ChristmasTreeMiddleBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
 
     public static final RegistryObject<Block>   CHRISTMAS_TREE_MULTI_LIGHTS_TOP = registerBlock("christmas_tree_multi_lights_top",
-            () -> new ChristmasTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F)) , null);
+            () -> new ChristmasTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
 
 
     public static final RegistryObject<Block> MANTEL_DECO = registerBlock("mantel_deco",
@@ -668,6 +668,31 @@ public static final RegistryObject<Block> GELT = registerBlock("gelt",
             () -> new MaidensDoorBlock(Block.Properties.copy(Blocks.OAK_DOOR).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
    //FENCES//
+
+    public static final RegistryObject<Block> ACACIA_PICKET_FENCE = registerBlock("acacia_picket_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(6F).noOcclusion()));
+
+    public static final RegistryObject<Block> BIRCH_PICKET_FENCE = registerBlock("birch_picket_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(6F).noOcclusion()));
+
+    public static final RegistryObject<Block> OAK_PICKET_FENCE = registerBlock("oak_picket_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(6F).noOcclusion()));
+
+    public static final RegistryObject<Block> SPRUCE_PICKET_FENCE = registerBlock("spruce_picket_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(6F).noOcclusion()));
+
+    public static final RegistryObject<Block> DARK_OAK_PICKET_FENCE = registerBlock("dark_oak_picket_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(6F).noOcclusion()));
+
+    public static final RegistryObject<Block> JUNGLE_PICKET_FENCE = registerBlock("jungle_picket_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(6F).noOcclusion()));
+
+    public static final RegistryObject<Block> WARPED_PICKET_FENCE = registerBlock("warped_picket_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(6F).noOcclusion()));
+
+    public static final RegistryObject<Block> CRIMSON_PICKET_FENCE = registerBlock("crimson_picket_fence",
+            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(6F).noOcclusion()));
+
    public static final RegistryObject<Block> ACACIA_WREATH_FENCE = registerBlock("acacia_wreath_fence",
            () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(6F).noOcclusion()));
 
@@ -676,6 +701,8 @@ public static final RegistryObject<Block> GELT = registerBlock("gelt",
 
     public static final RegistryObject<Block> OAK_WREATH_FENCE = registerBlock("oak_wreath_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(6F).noOcclusion()));
+
+
 
     public static final RegistryObject<Block> SPRUCE_WREATH_FENCE = registerBlock("spruce_wreath_fence",
             () -> new FenceBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(6F).noOcclusion()));
@@ -742,6 +769,30 @@ public static final RegistryObject<Block> GELT = registerBlock("gelt",
 
 
     //GATES//
+
+    public static final RegistryObject<Block> ACACIA_PICKET_FENCE_GATE = registerBlock("acacia_picket_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(6F).noOcclusion()));
+
+    public static final RegistryObject<Block> BIRCH_PICKET_FENCE_GATE = registerBlock("birch_picket_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(6F).noOcclusion()));
+
+    public static final RegistryObject<Block> OAK_PICKET_FENCE_GATE = registerBlock("oak_picket_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(6F).noOcclusion()));
+
+    public static final RegistryObject<Block> SPRUCE_PICKET_FENCE_GATE = registerBlock("spruce_picket_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(6F).noOcclusion()));
+
+    public static final RegistryObject<Block> DARK_OAK_PICKET_FENCE_GATE = registerBlock("dark_oak_picket_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(6F).noOcclusion()));
+
+    public static final RegistryObject<Block> JUNGLE_PICKET_FENCE_GATE = registerBlock("jungle_picket_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(6F).noOcclusion()));
+
+    public static final RegistryObject<Block> WARPED_PICKET_FENCE_GATE = registerBlock("warped_picket_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(6F).noOcclusion()));
+
+    public static final RegistryObject<Block> CRIMSON_PICKET_FENCE_GATE = registerBlock("crimson_picket_fence_gate",
+            () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(6F).noOcclusion()));
 
     public static final RegistryObject<Block> ACACIA_WREATH_FENCE_GATE = registerBlock("acacia_wreath_fence_gate",
             () -> new FenceGateBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(6F).noOcclusion()));

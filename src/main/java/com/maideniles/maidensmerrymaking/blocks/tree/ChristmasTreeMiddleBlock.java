@@ -73,8 +73,8 @@ public class ChristmasTreeMiddleBlock extends BushBlock {
 
                 System.out.println("O CHRISTMAS TREE, O CHRISTMAS TREE!");
                 level.setBlock(pos, ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_MIDDLE.get().defaultBlockState(),3);
-               //   level.setBlockState(pos.add(0,-1,0), ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_BOTTOM.get().defaultBlockState());
-             //     level.setBlockState(pos.add(0,1,0), ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_TOP.get().defaultBlockState());
+                 level.setBlock(pos.below(), ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_BOTTOM.get().defaultBlockState(),3);
+                  level.setBlock(pos.above(), ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_TOP.get().defaultBlockState(),3);
 
                 tree.shrink(1);
             }
@@ -89,8 +89,8 @@ public class ChristmasTreeMiddleBlock extends BushBlock {
 
                 System.out.println("O CHRISTMAS TREE, O CHRISTMAS TREE!");
                 level.setBlock(pos, ModBlocks.CHRISTMAS_TREE_MULTI_LIGHTS_MIDDLE.get().defaultBlockState(),3);
-                //   level.setBlockState(pos.add(0,-1,0), ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_BOTTOM.get().defaultBlockState());
-                //     level.setBlockState(pos.add(0,1,0), ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_TOP.get().defaultBlockState());
+                   level.setBlock(pos.below(), ModBlocks.CHRISTMAS_TREE_MULTI_LIGHTS_BOTTOM.get().defaultBlockState(),3);
+                     level.setBlock(pos.above(), ModBlocks.CHRISTMAS_TREE_MULTI_LIGHTS_TOP.get().defaultBlockState(),3);
 
                 tree.shrink(1);
             }

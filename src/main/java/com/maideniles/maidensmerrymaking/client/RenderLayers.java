@@ -133,30 +133,47 @@ public class RenderLayers {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CRIMSON_WREATH_LIGHTS_MULTI_DOOR.get(), RenderType.cutoutMipped());
 
 
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.ACACIA_PICKET_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ACACIA_WREATH_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ACACIA_WREATH_LIGHTS_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ACACIA_WREATH_MULTI_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BIRCH_WREATH_FENCE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BIRCH_PICKET_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BIRCH_WREATH_LIGHTS_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BIRCH_WREATH_MULTI_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.OAK_WREATH_FENCE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.OAK_PICKET_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.OAK_WREATH_LIGHTS_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.OAK_WREATH_MULTI_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.SPRUCE_WREATH_FENCE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.SPRUCE_PICKET_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.SPRUCE_WREATH_LIGHTS_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.SPRUCE_WREATH_MULTI_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.DARK_OAK_WREATH_FENCE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DARK_OAK_PICKET_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.DARK_OAK_WREATH_LIGHTS_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.DARK_OAK_WREATH_MULTI_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.JUNGLE_WREATH_FENCE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.JUNGLE_PICKET_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.JUNGLE_WREATH_LIGHTS_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.JUNGLE_WREATH_MULTI_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WARPED_WREATH_FENCE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.WARPED_PICKET_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WARPED_WREATH_LIGHTS_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.WARPED_WREATH_MULTI_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CRIMSON_WREATH_FENCE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CRIMSON_PICKET_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CRIMSON_WREATH_LIGHTS_FENCE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CRIMSON_WREATH_MULTI_FENCE.get(), RenderType.cutoutMipped());
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.ACACIA_PICKET_FENCE_GATE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.BIRCH_PICKET_FENCE_GATE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.OAK_PICKET_FENCE_GATE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DARK_OAK_PICKET_FENCE_GATE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.SPRUCE_PICKET_FENCE_GATE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.JUNGLE_PICKET_FENCE_GATE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.WARPED_PICKET_FENCE_GATE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CRIMSON_PICKET_FENCE_GATE.get(), RenderType.cutoutMipped());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ACACIA_WREATH_FENCE_GATE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ACACIA_WREATH_LIGHTS_FENCE_GATE.get(), RenderType.cutoutMipped());
@@ -275,6 +292,15 @@ public class RenderLayers {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_TREE_BOTTOM.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_TREE_MIDDLE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_TREE_TOP.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_BOTTOM.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_MIDDLE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_TOP.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_TREE_MULTI_LIGHTS_BOTTOM.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_TREE_MULTI_LIGHTS_MIDDLE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_TREE_MULTI_LIGHTS_TOP.get(), RenderType.cutoutMipped());
+
+
+
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.TREE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.TREE_MIDDLE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.TREE_TOP.get(), RenderType.cutoutMipped());

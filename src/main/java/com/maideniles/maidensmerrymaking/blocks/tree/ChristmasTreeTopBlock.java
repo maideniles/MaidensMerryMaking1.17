@@ -79,8 +79,8 @@ public class ChristmasTreeTopBlock extends BushBlock {
 
                 System.out.println("O CHRISTMAS TREE, O CHRISTMAS TREE!");
                 level.setBlock(pos, ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_TOP.get().defaultBlockState(),3);
-                //  level.setBlockState(pos.offset(0,-1,0), ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_MIDDLE.get().defaultBlockState());
-               //   level.setBlockState(pos.offset(0,-2,0), ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_BOTTOM.get().defaultBlockState());
+                  level.setBlock(pos.offset(0,-1,0), ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_MIDDLE.get().defaultBlockState(),3);
+                  level.setBlock(pos.offset(0,-2,0), ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_BOTTOM.get().defaultBlockState(),3);
 
                 tree.shrink(1);
             }
@@ -95,8 +95,8 @@ public class ChristmasTreeTopBlock extends BushBlock {
 
                 System.out.println("O CHRISTMAS TREE, O CHRISTMAS TREE!");
                 level.setBlock(pos, ModBlocks.CHRISTMAS_TREE_MULTI_LIGHTS_TOP.get().defaultBlockState(),3);
-                //  level.setBlockState(pos.offset(0,-1,0), ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_MIDDLE.get().defaultBlockState());
-                //   level.setBlockState(pos.offset(0,-2,0), ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_BOTTOM.get().defaultBlockState());
+                  level.setBlock(pos.offset(0,-1,0), ModBlocks.CHRISTMAS_TREE_MULTI_LIGHTS_MIDDLE.get().defaultBlockState(),3);
+                   level.setBlock(pos.offset(0,-2,0), ModBlocks.CHRISTMAS_TREE_MULTI_LIGHTS_BOTTOM.get().defaultBlockState(),3);
 
                 tree.shrink(1);
             }
@@ -105,8 +105,6 @@ public class ChristmasTreeTopBlock extends BushBlock {
 
                 System.out.println("YOU MUST BE MY LUCKY STAR!");
                 level.setBlock(pos.above(), ModBlocks.STAR_TOPPER.get().defaultBlockState(),3);
-                //  level.setBlockState(pos.offset(0,-1,0), ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_MIDDLE.get().defaultBlockState());
-                //   level.setBlockState(pos.offset(0,-2,0), ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_BOTTOM.get().defaultBlockState());
 
                 tree.shrink(1);
             }

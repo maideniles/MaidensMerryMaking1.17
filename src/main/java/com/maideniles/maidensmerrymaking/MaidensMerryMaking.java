@@ -2,6 +2,7 @@ package com.maideniles.maidensmerrymaking;
 
 import com.maideniles.maidensmerrymaking.client.RenderLayers;
 import com.maideniles.maidensmerrymaking.init.ModBlocks;
+import com.maideniles.maidensmerrymaking.init.ModFeatures;
 import com.maideniles.maidensmerrymaking.init.ModItems;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
@@ -19,20 +20,7 @@ public class MaidensMerryMaking {
     // Directly reference a log4j logger.
     private static final Logger LOGGER = LogManager.getLogger();
 
- /*   public static final CreativeModeTab MAIDENS_BLOCKS_GROUP = new CreativeModeTab("maidens_blocks_group") {
-        @Override
-        public ItemStack makeIcon() {
-            return new ItemStack(Blocks.AMETHYST_BLOCK);
-        }
-    };
 
-    public static final CreativeModeTab MAIDENS_ITEMS_GROUP = new CreativeModeTab("maidens_items_tab") {
-        @Override
-        public ItemStack makeIcon() {
-            return new ItemStack(Items.AMETHYST_SHARD);
-        }
-    };
-*/
 
 
     public MaidensMerryMaking() {
@@ -42,8 +30,8 @@ public class MaidensMerryMaking {
         ModItems.register(eventBus);
         ModBlocks.register(eventBus);
         RenderLayers.safeRunClient();
-       // ModFeatures.registerFeature(eventBus);
-       // ModFeatures.registerConfig(eventBus);
+        ModFeatures.register(eventBus);
+
 
         eventBus.addListener(this::setup);
 

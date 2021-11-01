@@ -111,7 +111,7 @@
 			"to": [-2, 16, 14],
 			"shade": false,
 			"faces": {
-				"north": {"uv": [0, 0, 4, 8], "texture": "#0"},
+				"north": {"uv": [9, 8, 13, 16], "texture": "#0"},
 				"east": {"uv": [0, 0, 12, 8], "texture": "#0"},
 				"south": {"uv": [0, 0, 4, 8], "texture": "#0"},
 				"west": {"uv": [2, 0, 14, 8], "texture": "#0"},
@@ -125,9 +125,9 @@
 			"shade": false,
 			"faces": {
 				"north": {"uv": [0, 0, 4, 8], "texture": "#0"},
-				"east": {"uv": [2, 0, 14, 8], "texture": "#0"},
+				"east": {"uv": [3, 0, 15, 8], "texture": "#0"},
 				"south": {"uv": [0, 0, 4, 8], "texture": "#0"},
-				"west": {"uv": [0, 0, 12, 8], "texture": "#0"},
+				"west": {"uv": [2, 0, 14, 8], "texture": "#0"},
 				"up": {"uv": [0, 0, 4, 12], "texture": "#0"},
 				"down": {"uv": [0, 0, 4, 12], "texture": "#0"}
 			}
@@ -189,10 +189,10 @@
 			"to": [14, 16, -2],
 			"shade": false,
 			"faces": {
-				"north": {"uv": [2, 0, 14, 8], "texture": "#0"},
-				"east": {"uv": [0, 0, 4, 8], "texture": "#0"},
+				"north": {"uv": [2, 7, 14, 15], "texture": "#0"},
+				"east": {"uv": [11, 3, 15, 11], "texture": "#0"},
 				"south": {"uv": [0, 0, 12, 8], "texture": "#0"},
-				"west": {"uv": [0, 0, 4, 8], "texture": "#0"},
+				"west": {"uv": [9, 7, 13, 15], "texture": "#0"},
 				"up": {"uv": [0, 0, 12, 4], "texture": "#0"},
 				"down": {"uv": [0, 0, 12, 4], "texture": "#0"}
 			}
@@ -204,8 +204,8 @@
 			"faces": {
 				"north": {"uv": [0, 0, 12, 8], "texture": "#0"},
 				"east": {"uv": [0, 0, 4, 8], "texture": "#0"},
-				"south": {"uv": [2, 0, 14, 8], "texture": "#0"},
-				"west": {"uv": [0, 0, 4, 8], "texture": "#0"},
+				"south": {"uv": [2, 4, 14, 12], "texture": "#0"},
+				"west": {"uv": [6, 5, 10, 13], "texture": "#0"},
 				"up": {"uv": [3, 4, 15, 8], "texture": "#0"},
 				"down": {"uv": [0, 0, 12, 4], "texture": "#0"}
 			}
@@ -239,7 +239,6 @@
 		{
 			"from": [6, 0, 6],
 			"to": [10, 4, 10],
-			"shade": false,
 			"faces": {
 				"north": {"uv": [6, 12, 10, 16], "texture": "#1_2"},
 				"east": {"uv": [6, 12, 10, 16], "texture": "#1_2"},
@@ -280,8 +279,8 @@
 			"to": [18, 16, 2],
 			"shade": false,
 			"faces": {
-				"north": {"uv": [0, 0, 4, 8], "texture": "#0"},
-				"east": {"uv": [0, 0, 4, 8], "texture": "#0"},
+				"north": {"uv": [1, 7, 5, 15], "texture": "#0"},
+				"east": {"uv": [4, 0, 8, 8], "texture": "#0"},
 				"south": {"uv": [0, 0, 4, 8], "texture": "#0"},
 				"west": {"uv": [0, 0, 4, 8], "texture": "#0"},
 				"up": {"uv": [0, 0, 4, 4], "texture": "#0"},
@@ -294,8 +293,8 @@
 			"shade": false,
 			"faces": {
 				"north": {"uv": [0, 0, 4, 8], "texture": "#0"},
-				"east": {"uv": [0, 0, 4, 8], "texture": "#0"},
-				"south": {"uv": [0, 0, 4, 8], "texture": "#0"},
+				"east": {"uv": [0, 6, 4, 14], "texture": "#0"},
+				"south": {"uv": [4, 0, 8, 8], "texture": "#0"},
 				"west": {"uv": [0, 0, 4, 8], "texture": "#0"},
 				"up": {"uv": [0, 0, 4, 4], "texture": "#0"},
 				"down": {"uv": [0, 0, 4, 4], "texture": "#0"}
@@ -308,7 +307,7 @@
 			"faces": {
 				"north": {"uv": [0, 0, 4, 8], "texture": "#0"},
 				"east": {"uv": [0, 0, 4, 8], "texture": "#0"},
-				"south": {"uv": [0, 0, 4, 8], "texture": "#0"},
+				"south": {"uv": [6, 1, 10, 9], "texture": "#0"},
 				"west": {"uv": [0, 0, 4, 8], "texture": "#0"},
 				"up": {"uv": [0, 0, 4, 4], "texture": "#0"},
 				"down": {"uv": [0, 0, 4, 4], "texture": "#0"}
@@ -319,10 +318,10 @@
 			"to": [2, 16, 2],
 			"shade": false,
 			"faces": {
-				"north": {"uv": [0, 0, 4, 8], "texture": "#0"},
+				"north": {"uv": [1, 2, 5, 10], "texture": "#0"},
 				"east": {"uv": [0, 0, 4, 8], "texture": "#0"},
 				"south": {"uv": [0, 0, 4, 8], "texture": "#0"},
-				"west": {"uv": [0, 0, 4, 8], "texture": "#0"},
+				"west": {"uv": [10, 3, 14, 11], "texture": "#0"},
 				"up": {"uv": [0, 0, 4, 4], "texture": "#0"},
 				"down": {"uv": [0, 0, 4, 4], "texture": "#0"}
 			}
@@ -331,25 +330,25 @@
 	"groups": [0, 1, 2, 3, 4, 5, 6,
 		{
 			"name": "pine_gen_bottom",
-			"shade": false,
 			"origin": [8, 8, 8],
+			"shade": false,
 			"children": [
 				{
 					"name": "bottom tier",
-					"shade": false,
 					"origin": [8, 8, 8],
+					"shade": false,
 					"children": [7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
 				},
 				{
 					"name": "second tier",
-					"shade": false,
 					"origin": [8, 8, 8],
+					"shade": false,
 					"children": []
 				},
 				{
 					"name": "third tier",
-					"shade": false,
 					"origin": [8, 8, 8],
+					"shade": false,
 					"children": []
 				}, 18, 19, 20, 21, 22, 23, 24]
 		}
