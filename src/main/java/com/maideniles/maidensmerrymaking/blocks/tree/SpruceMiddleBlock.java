@@ -1,9 +1,12 @@
 package com.maideniles.maidensmerrymaking.blocks.tree;
 
 
+import com.maideniles.maidensmerrymaking.init.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.level.BlockGetter;
+import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelReader;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -11,14 +14,13 @@ import net.minecraft.world.level.block.BushBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
-import net.minecraftforge.common.IPlantable;
 
 
-public class PineTreeBottomBlock extends BushBlock implements IPlantable {
+public class SpruceMiddleBlock extends BushBlock {
 
     protected static final VoxelShape SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D);
 
-    public PineTreeBottomBlock(Block.Properties properties) {
+    public SpruceMiddleBlock(Block.Properties properties) {
         super(properties);
 
     }
@@ -30,16 +32,8 @@ public class PineTreeBottomBlock extends BushBlock implements IPlantable {
     @Override
     protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
         Block block = state.getBlock();
-        return block == Blocks.GRASS_BLOCK || block == Blocks.DIRT || block == Blocks.COARSE_DIRT || block == Blocks.PODZOL || block == Blocks.FARMLAND;
+        return block == ModBlocks.TREE.get() ;
     }
-
-    /**
-     * Update the provided state given the provided neighbor facing and neighbor state, returning a new state.
-     * For example, fences make their connections to the passed in state if possible, and wet concrete powder immediately
-     * returns its solidified counterpart.
-     * Note that this method should ideally consider only the specific face passed in.
-     */
-
 
     public boolean canSurvive(BlockState pState, LevelReader pLevel, BlockPos pPos) {
         BlockPos blockpos = pPos.below();
@@ -48,9 +42,21 @@ public class PineTreeBottomBlock extends BushBlock implements IPlantable {
         return this.mayPlaceOn(pLevel.getBlockState(blockpos), pLevel, blockpos);
     }
 
-    /**
-     * Gets the render layer this block will render on. SOLID for solid blocks, CUTOUT or CUTOUT_MIPPED for on-off
-     * transparency (glass, reeds), TRANSLUCENT for fully blended transparency (stained glass)
-     */
+
+
+
+    @Override
+    public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
+
+        BlockState blockstate = level.getBlockState(pos);
+        BlockState blockstate2 = level.getBlockState(pos.below());
+        if (blockstate.getBlock() == this && blockstate2.getBlock() == ModBlocks.TREE.get()) {
+
+            level.setBlock(pos.below(), Blocks.AIR.defaultBlockState(), 35);
+            level.setBlock(pos, Blocks.AIR.defaultBlockState(), 35);
+            System.out.println("NO MORE TREE");
+        }
+
+    }
 
 }

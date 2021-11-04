@@ -1,6 +1,5 @@
 package com.maideniles.maidensmerrymaking.blocks.tree;
 
-
 import com.maideniles.maidensmerrymaking.init.ModBlocks;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
@@ -16,11 +15,11 @@ import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.VoxelShape;
 
 
-public class PineTreeMiddleBlock extends BushBlock {
+public class SpruceTopBlock extends BushBlock {
 
     protected static final VoxelShape SHAPE = Block.box(2.0D, 0.0D, 2.0D, 14.0D, 16.0D, 14.0D);
 
-    public PineTreeMiddleBlock(Block.Properties properties) {
+    public SpruceTopBlock(Block.Properties properties) {
         super(properties);
 
     }
@@ -32,7 +31,7 @@ public class PineTreeMiddleBlock extends BushBlock {
     @Override
     protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
         Block block = state.getBlock();
-        return block == ModBlocks.TREE.get() ;
+        return block == ModBlocks.TREE_MIDDLE.get() ;
     }
 
     public boolean canSurvive(BlockState pState, LevelReader pLevel, BlockPos pPos) {
@@ -42,7 +41,10 @@ public class PineTreeMiddleBlock extends BushBlock {
         return this.mayPlaceOn(pLevel.getBlockState(blockpos), pLevel, blockpos);
     }
 
-
+    /**
+     * Gets the render layer this block will render on. SOLID for solid blocks, CUTOUT or CUTOUT_MIPPED for on-off
+     * transparency (glass, reeds), TRANSLUCENT for fully blended transparency (stained glass)
+     */
 
 
     @Override
@@ -50,11 +52,15 @@ public class PineTreeMiddleBlock extends BushBlock {
 
         BlockState blockstate = level.getBlockState(pos);
         BlockState blockstate2 = level.getBlockState(pos.below());
-        if (blockstate.getBlock() == this && blockstate2.getBlock() == ModBlocks.TREE.get()) {
 
+        if (blockstate.getBlock() == this && blockstate2.getBlock() == ModBlocks.TREE_MIDDLE.get()
+                ) {
+
+            level.setBlock(pos.offset(0,-2,0), Blocks.AIR.defaultBlockState(),3);
             level.setBlock(pos.below(), Blocks.AIR.defaultBlockState(), 35);
             level.setBlock(pos, Blocks.AIR.defaultBlockState(), 35);
             System.out.println("NO MORE TREE");
+
         }
 
     }

@@ -75,13 +75,13 @@ public class ModBlocks {
 
     //blocks that make up the christmas pine feature//
     public static final RegistryObject<Block>   TREE = registerBlock("christmas_pine_bottom",
-            () -> new PineTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).sound(SoundType.CROP)) , null);
+            () -> new SpruceBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).sound(SoundType.CROP)) , null);
 
     public static final RegistryObject<Block>   TREE_MIDDLE = registerBlock("christmas_pine_middle",
-            () -> new PineTreeMiddleBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).sound(SoundType.CROP)) , null);
+            () -> new SpruceMiddleBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).sound(SoundType.CROP)) , null);
 
     public static final RegistryObject<Block>   TREE_TOP = registerBlock("christmas_pine_top",
-            () -> new PineTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).sound(SoundType.CROP)) , null);
+            () -> new SpruceTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).sound(SoundType.CROP)) , null);
 
     //HARVEST TRAY//
     public static final RegistryObject<Block> HARVEST_TRAY = registerBlock("harvest_tray",
