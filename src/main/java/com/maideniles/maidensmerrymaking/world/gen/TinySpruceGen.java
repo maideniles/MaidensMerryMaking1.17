@@ -18,7 +18,7 @@ import java.util.function.Supplier;
 
 public class TinySpruceGen {
     public static void setupTreeGen(final BiomeLoadingEvent event) {
-        if (event.getCategory().equals(Biome.BiomeCategory.TAIGA)) {
+        if (event.getCategory().equals(Biome.BiomeCategory.TAIGA) || event.getCategory().equals(Biome.BiomeCategory.ICY)) {
             ResourceKey<Biome> key = ResourceKey.create(Registry.BIOME_REGISTRY, event.getName());
             Set<BiomeDictionary.Type> types = BiomeDictionary.getTypes(key);
 
