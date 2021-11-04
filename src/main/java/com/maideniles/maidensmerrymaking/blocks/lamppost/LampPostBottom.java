@@ -33,40 +33,6 @@ public class LampPostBottom extends HorizontalDecoBlock {
         return this.defaultBlockState().setValue(FACING, p_49573_.getHorizontalDirection());
     }
 
-    @Override
-    public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
 
-
-
-        BlockState above = level.getBlockState(pos.above());
-        BlockState up2 = level.getBlockState(pos.above(2));
-
-//IF THE BLOCK ABOVE IS THE LAMP,
-        if (above.getBlock() == ModBlocks.LAMP_POST.get()) {
-
-            level.setBlock(pos.above(), Blocks.AIR.defaultBlockState(),3);  //CHANGE LAMP TO AIR
-
-            level.setBlock(pos, ModBlocks.LAMP_POST.get().defaultBlockState().setValue(FACING, state.getValue(FACING)),3);
-            //MOVE LAMP DOWN
-        }
-
-
-        if (above.getBlock() instanceof LampPostPole && up2.getBlock() == ModBlocks.LAMP_POST.get() ) {
-
-            //PLACE BOTTOM UNDER LAMP
-            level.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
-            //MOVE LAMP DOWN
-            level.setBlock(pos.above(), Blocks.AIR.defaultBlockState(), 3);
-            //CHANGE LAMP TO AIR
-            level.setBlock(pos.above().above(), Blocks.AIR.defaultBlockState(), 3);
-
-        }
-          //  popResource(level, pos, new ItemStack(Item.byBlock(ModBlocks.LAMP_POST.get()))); //SPAWN THE LAMP//
-
-                if(up2.getBlock()== ModBlocks.LAMP_POST_ON.get()|| above.getBlock() == ModBlocks.LAMP_POST_ON.get()) {
-                    popResource(level, pos, new ItemStack(Items.TORCH));//SPAWN THE TORCH//}
-
-        }
-    }
 
 }

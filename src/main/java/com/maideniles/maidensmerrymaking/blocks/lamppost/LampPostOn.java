@@ -88,25 +88,11 @@ public class LampPostOn extends HorizontalDecoBlock {
     @Override
     public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
 
-        BlockState blockstate = level.getBlockState(pos);
-        BlockState blockstate1 = level.getBlockState(pos.below());
-
-
-        if (blockstate.getBlock() == this && blockstate1.getBlock() instanceof LampPostPole) {
-
-            level.setBlock(pos, Blocks.AIR.defaultBlockState(), 3);
-            level.setBlock(pos.below(), ModBlocks.LAMP_POST.get().defaultBlockState().setValue(FACING, state.getValue(FACING)),3);
 
             popResource(level, pos, new ItemStack(Items.TORCH));
 
         }
 
-        if (blockstate.getBlock() == this && blockstate1.getBlock() == ModBlocks.LAMP_POST_BOTTOM.get()) {
 
-            //   level.setBlock(pos, Blocks.AIR.defaultBlockstate());
-            level.setBlock(pos.below(), ModBlocks.LAMP_POST.get().defaultBlockState().setValue(FACING, state.getValue(FACING)), 3);
-            popResource(level, pos, new ItemStack(Items.TORCH));
 
-        }
-    }
 }

@@ -22,6 +22,7 @@ public class RenderLayers {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.LAMP_POST_POLE_WREATH.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.LAMP_POST_POLE_WREATH_MULTI.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.LAMP_POST_POLE_WREATH_WHITE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.LAMP_POST_POLE_BOW.get(), RenderType.cutoutMipped());
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_WREATH.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_WREATH_MULTI_LIGHTS.get(), RenderType.cutoutMipped());

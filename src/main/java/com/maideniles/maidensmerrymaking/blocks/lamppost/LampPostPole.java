@@ -79,33 +79,22 @@ public class LampPostPole extends HorizontalDecoBlock {
     public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
 
         BlockState blockstate = level.getBlockState(pos);
-        BlockState blockstate1 = level.getBlockState(pos.above());
-        BlockState blockstate2 = level.getBlockState(pos.below());
 
-        if (blockstate1.getBlock() == ModBlocks.LAMP_POST.get()) {
+        if (blockstate.getBlock() == ModBlocks.LAMP_POST_POLE_BOW.get()) {
+            popResource(level, pos, new ItemStack(ModItems.BOW.get()));
+                }
 
-         //   level.setBlock(pos.above(), Blocks.AIR.defaultBlockState(),3);
-            level.setBlock(pos, ModBlocks.LAMP_POST.get().defaultBlockState().setValue(FACING, state.getValue(FACING)), 3);
+        if (blockstate.getBlock() == ModBlocks.LAMP_POST_POLE_WREATH.get()) {
+            popResource(level, pos, new ItemStack(Item.byBlock(ModBlocks.CHRISTMAS_WREATH.get())));
         }
 
-      /*  if (blockstate.getBlock() == this && blockstate1.getBlock() == ModBlocks.LAMP_POST_ON.get()) {
-
-            level.setBlock(pos, ModBlocks.LAMP_POST.get().defaultBlockState().setValue(FACING, state.getValue(FACING)), 3);
-            popResource(level, pos, new ItemStack(Items.TORCH));
-
+        if (blockstate.getBlock() == ModBlocks.LAMP_POST_POLE_WREATH_WHITE.get()) {
+            popResource(level, pos, new ItemStack(Item.byBlock(ModBlocks.CHRISTMAS_WREATH_WHITE_LIGHTS.get())));
         }
 
-        if (blockstate2.getBlock() == ModBlocks.LAMP_POST_BOTTOM.get() && blockstate1.getBlock() == ModBlocks.LAMP_POST.get()) {
-            level.setBlock(pos, ModBlocks.LAMP_POST.get().defaultBlockState().setValue(FACING, state.getValue(FACING)), 3);
-
+        if (blockstate.getBlock() == ModBlocks.LAMP_POST_POLE_WREATH_MULTI.get()) {
+            popResource(level, pos, new ItemStack(Item.byBlock(ModBlocks.CHRISTMAS_WREATH_MULTI_LIGHTS.get())));
         }
-
-        if (blockstate2.getBlock() == ModBlocks.LAMP_POST_BOTTOM.get() && blockstate1.getBlock() == ModBlocks.LAMP_POST_ON.get()) {
-            level.setBlock(pos, ModBlocks.LAMP_POST.get().defaultBlockState().setValue(FACING, state.getValue(FACING)), 3);
-            popResource(level, pos, new ItemStack(Items.TORCH));
-        }*/
-
-
     }
 
 
