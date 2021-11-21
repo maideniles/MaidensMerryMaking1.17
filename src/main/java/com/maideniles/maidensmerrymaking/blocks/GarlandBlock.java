@@ -10,10 +10,10 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class GarlandBlock extends HorizontalDecoBlock {
 
-    protected static final VoxelShape WEST_AABB = Block.box(0.0D, 0.0D, 0.0D, 1.0D, 16.0D, 16.0D);
-    protected static final VoxelShape EAST_AABB = Block.box(15.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
-    protected static final VoxelShape NORTH_AABB = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 1.0D);
-    protected static final VoxelShape SOUTH_AABB = Block.box(0.0D, 0.0D, 15.0D, 16.0D, 16.0D, 16.0D);
+    protected static final VoxelShape WEST_AABB = Block.box(0.0D, 0.0D, 0.0D, 6.0D, 16.0D, 16.0D);
+    protected static final VoxelShape EAST_AABB = Block.box(11.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+    protected static final VoxelShape NORTH_AABB = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 6.0D);
+    protected static final VoxelShape SOUTH_AABB = Block.box(0.0D, 0.0D, 11.0D, 16.0D, 16.0D, 16.0D);
 
     public GarlandBlock(Properties properties) {
         super(properties);

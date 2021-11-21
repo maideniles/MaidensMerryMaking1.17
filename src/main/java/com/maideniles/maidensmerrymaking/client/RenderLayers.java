@@ -15,6 +15,10 @@ public class RenderLayers {
     @SubscribeEvent
     public static void onClientSetup(FMLClientSetupEvent event) {
 
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MKEKA_WITH_CORN_1.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MKEKA_WITH_CORN_2.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MKEKA_WITH_CORN_3.get(), RenderType.cutoutMipped());
+
         //LOGS//
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.FIREPLACE_LOGS.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.FIREPLACE_LOGS_ON.get(), RenderType.cutoutMipped());
@@ -35,11 +39,24 @@ public class RenderLayers {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CLASSIC_LIGHTS_DIAGONAL_RIGHT.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CLASSIC_LIGHTS_CAP.get(), RenderType.cutoutMipped());
 
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CLASSIC_LIGHTS_VERTICAL_LEFT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CLASSIC_LIGHTS_VERTICAL_RIGHT.get(), RenderType.cutoutMipped());
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CLASSIC_LIGHTS_VERTICAL_CORNER_LEFT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CLASSIC_LIGHTS_VERTICAL_CORNER_RIGHT.get(), RenderType.cutoutMipped());
+
+
         //CLASSIC MULTI COLORED//
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CLASSIC_MULTI.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CLASSIC_MULTI_DIAGONAL_LEFT.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CLASSIC_MULTI_DIAGONAL_RIGHT.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CLASSIC_MULTI_CAP.get(), RenderType.cutoutMipped());
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CLASSIC_MULTI_VERTICAL_LEFT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CLASSIC_MULTI_VERTICAL_RIGHT.get(), RenderType.cutoutMipped());
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CLASSIC_MULTI_VERTICAL_CORNER_LEFT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CLASSIC_MULTI_VERTICAL_CORNER_RIGHT.get(), RenderType.cutoutMipped());
 
         //ICICLE LIGHTS//
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ICICLE_LIGHTS.get(), RenderType.translucent());
@@ -70,13 +87,20 @@ public class RenderLayers {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.MINI_LIGHTS_DIAGONAL_LEFT.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.MINI_LIGHTS_DIAGONAL_RIGHT.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.MINI_LIGHTS_CAP.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MINI_LIGHTS_VERTICAL_LEFT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MINI_LIGHTS_VERTICAL_RIGHT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MINI_CORNER_LIGHTS_VERTICAL_LEFT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MINI_CORNER_LIGHTS_VERTICAL_RIGHT.get(), RenderType.cutoutMipped());
 
         //MINI MULTI COLORED//
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.MINI_MULTI.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.MINI_MULTI_DIAGONAL_LEFT.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.MINI_MULTI_DIAGONAL_RIGHT.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.MINI_MULTI_CAP.get(), RenderType.cutoutMipped());
-
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MINI_MULTI_VERTICAL_LEFT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MINI_MULTI_VERTICAL_RIGHT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MINI_CORNER_MULTI_VERTICAL_RIGHT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.MINI_CORNER_MULTI_VERTICAL_LEFT.get(), RenderType.cutoutMipped());
 //GARLAND BLOCKS--DIAGONAL//
 
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.GARLAND_DIAGONAL_LEFT.get(), RenderType.cutoutMipped());
@@ -92,6 +116,20 @@ public class RenderLayers {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.GARLAND_HORIZONTAL.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.GARLAND_HORIZONTAL_LIGHTS_WHITE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.GARLAND_HORIZONTAL_LIGHTS_MULTI.get(), RenderType.cutoutMipped());
+
+        //GARLAND VERTICAL//
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GARLAND_VERTICAL_LIGHTS_MULTI_RIGHT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GARLAND_VERTICAL_LIGHTS_WHITE_RIGHT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GARLAND_VERTICAL_LIGHTS_MULTI_LEFT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GARLAND_VERTICAL_LIGHTS_WHITE_LEFT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GARLAND_VERTICAL_LEFT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GARLAND_VERTICAL_RIGHT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GARLAND_VERTICAL_CORNER_LEFT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GARLAND_VERTICAL_CORNER_RIGHT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GARLAND_VERTICAL_CORNER_LIGHTS_LEFT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GARLAND_VERTICAL_CORNER_LIGHTS_RIGHT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GARLAND_VERTICAL_CORNER_MULTI_LEFT.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.GARLAND_VERTICAL_CORNER_MULTI_RIGHT.get(), RenderType.cutoutMipped());
 
 
         //DOORS & FENCES//
@@ -284,13 +322,14 @@ public class RenderLayers {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ANDESITE_GARLAND_LIGHTS_WALL.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.ANDESITE_GARLAND_MULTI_WALL.get(), RenderType.cutoutMipped());
 
+        //MANTEL DECO//
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.MANTEL_DECO.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.MANTEL_DECO_1.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.MANTEL_DECO_2.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.MANTEL_DECO_3.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.MANTEL_DECO_4.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.MANTEL_DECO_5.get(), RenderType.cutoutMipped());
-
+//TREES//
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_TREE_BOTTOM.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_TREE_MIDDLE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_TREE_TOP.get(), RenderType.cutoutMipped());
@@ -302,17 +341,17 @@ public class RenderLayers {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_TREE_MULTI_LIGHTS_TOP.get(), RenderType.cutoutMipped());
 
 
-
+//GEN TREE//
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.TREE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.TREE_MIDDLE.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.TREE_TOP.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_TREE_STAND.get(), RenderType.cutoutMipped());
-
+//TOPPERS//
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.BOW_TOPPER.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.STAR_TOPPER.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_TREE_STAND.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.CORN_STALK.get(), RenderType.cutoutMipped());
-
+//HOLIDAY BLOCKS//
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.KINARA.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.KINARA_LIT.get(), RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.MKEKA_WITH_KINARA_LIT.get(), RenderType.cutoutMipped());
@@ -326,6 +365,25 @@ public class RenderLayers {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.DREIDEL.get(),RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.GELT.get(),RenderType.cutoutMipped());
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.TINY_SPRUCE.get(),RenderType.cutoutMipped());
+
+       //WREATHS//
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_WREATH.get(),RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_WREATH_WHITE_LIGHTS.get(),RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.CHRISTMAS_WREATH_MULTI_LIGHTS.get(),RenderType.cutoutMipped());
+//LIT LEAVES-BUSHES//
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.HOLLY_SAPLING.get(), RenderType.cutoutMipped());
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.SPRUCE_LEAVES_HOLLY.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.SPRUCE_LEAVES_LIGHTS_WHITE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.SPRUCE_LEAVES_LIGHTS_LARGE_WHITE.get(), RenderType.cutoutMipped());
+
+
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.SPRUCE_LEAVES_LIGHTS_MULTI.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.SPRUCE_LEAVES_LIGHTS_LARGE_MULTI.get(), RenderType.cutoutMipped());
+
+
+
 
 
 

@@ -80,6 +80,7 @@
 	"block.maidensmerrymaking.dreidel": "Dreidels",
 	"block.maidensmerrymaking.gelt": "Gelt",
 	"block.maidensmerrymaking.tiny_spruce": "Small Spruce Sapling",
+	"block.maidensmerrymaking.holly_sapling": "Holly Tree Sapling",
 	
 	"block.maidensmerrymaking.warped_picket_fence": "Warped Picket Fence",
 	"block.maidensmerrymaking.crimson_picket_fence": "Crimson Picket Fence",
@@ -192,8 +193,23 @@
 "block.maidensmerrymaking.lamp_post_on": "Lamp Post (On)",
 
 "block.maidensmerrymaking.garland_horizontal": "Garland (Horizontal)",
+"block.maidensmerrymaking.garland_vertical_left": "Garland (Vertical Lefthand)",
+"block.maidensmerrymaking.garland_vertical_right": "Garland (Vertical Righthand)",
+"block.maidensmerrymaking.garland_vertical_corner_left": "Garland (Vertical Corner Lefthand)",
+"block.maidensmerrymaking.garland_vertical_corner_right": "Garland (Vertical Corner Righthand)",
+
+
 "block.maidensmerrymaking.garland_horizontal_lights": "Garland White Lights (Horizontal)",
+"block.maidensmerrymaking.garland_vertical_lights_left": "Garland White Lights (Vertical Lefthand)",
+"block.maidensmerrymaking.garland_vertical_lights_right": "Garland White Lights (Vertical Righthand)",
+"block.maidensmerrymaking.garland_vertical_corner_lights_left": "Garland White Lights (Vertical Corner Lefthand)",
+"block.maidensmerrymaking.garland_vertical_corner_lights_right": "Garland White Lights (Vertical Corner Righthand)",
+
 "block.maidensmerrymaking.garland_horizontal_multi": "Garland Multi Lights (Horizontal)",
+"block.maidensmerrymaking.garland_vertical_multi_left": "Garland Multi Lights (Vertical Lefthand)",
+"block.maidensmerrymaking.garland_vertical_multi_right": "Garland Multi Lights (Vertical Righthand)",
+"block.maidensmerrymaking.garland_vertical_corner_multi_left": "Garland Multi Lights (Vertical Corner Lefthand)",
+"block.maidensmerrymaking.garland_vertical_corner_multi_right": "Garland Multi Lights (Vertical Corner Righthand)",
 
 "block.maidensmerrymaking.garland_diagonal_left": "Garland (Diagonal Left)",
 "block.maidensmerrymaking.garland_lights_diagonal_left": "Garland White Lights (Diagonal_Left)",
@@ -216,6 +232,9 @@
 "block.maidensmerrymaking.roof_jungle_stairs": "Jungle Roofed Stairs",
 "block.maidensmerrymaking.roof_oak_stairs": "Oak Roofed Stairs",
 "block.maidensmerrymaking.roof_spruce_stairs": "Spruce Roofed Stairs",
+"block.maidensmerrymaking.roof_polished_blackstone_brick_stairs": "Polished Blackstone Brick Roofed Stairs",
+"block.maidensmerrymaking.roof_deepslate_brick_stairs": "Deepslate Brick Roofed Stairs",
+"block.maidensmerrymaking.roof_stone_brick_stairs": "Stone Brick Roofed Stairs",
 
 "block.maidensmerrymaking.snowy_acacia_stairs": "Acacia Snowy Stairs",
 "block.maidensmerrymaking.snowy_birch_stairs": "Birch Snowy Stairs",
@@ -223,6 +242,36 @@
 "block.maidensmerrymaking.snowy_jungle_stairs": "Jungle Snowy Stairs",
 "block.maidensmerrymaking.snowy_oak_stairs": "Oak Snowy Stairs",
 "block.maidensmerrymaking.snowy_spruce_stairs": "Spruce Snowy Stairs",
+
+"block.maidensmerrymaking.snowy_polished_blackstone_brick_stairs": "Polished Blackstone Brick Snowy Stairs",
+"block.maidensmerrymaking.snowy_deepslate_brick_stairs": "Deepslate Brick Snowy Stairs",
+"block.maidensmerrymaking.snowy_stone_brick_stairs": "Stone Brick Snowy Stairs",
+
+"block.maidensmerrymaking.acacia_roof_slab": "Acacia Roofed Slab",
+"block.maidensmerrymaking.birch_roof_slab": "Birch Roofed Slab",
+"block.maidensmerrymaking.dark_oak_roof_slab": "Dark Oak Roofed Slab",
+"block.maidensmerrymaking.jungle_roof_slab": "Jungle Roofed Slab",
+"block.maidensmerrymaking.oak_roof_slab": "Oak Roofed Slab",
+"block.maidensmerrymaking.spruce_roof_slab": "Spruce Roofed Slab",
+"block.maidensmerrymaking.polished_blackstone_brick_roof_slab": "Polished Blackstone Brick Roofed Slab",
+"block.maidensmerrymaking.deepslate_brick_roof_slab": "Deepslate Brick Roofed Slab",
+"block.maidensmerrymaking.stone_brick_roof_slab": "Stone Brick Roofed Slab",
+
+"block.maidensmerrymaking.acacia_snowy_slab": "Acacia Snowy Slab",
+"block.maidensmerrymaking.birch_snowy_slab": "Birch Snowy Slab",
+"block.maidensmerrymaking.dark_oak_snowy_slab": "Dark Oak Snowy Slab",
+"block.maidensmerrymaking.jungle_snowy_slab": "Jungle Snowy Slab",
+"block.maidensmerrymaking.oak_snowy_slab": "Oak Snowy Slab",
+"block.maidensmerrymaking.spruce_snowy_slab": "Spruce Snowy Slab",
+"block.maidensmerrymaking.crimson_snowy_slab": "Crimson Snowy Slab",
+"block.maidensmerrymaking.warped_snowy_slab": "Warped Snowy Slab",
+"block.maidensmerrymaking.crimson_roof_slab": "Crimson Roofed Slab",
+"block.maidensmerrymaking.warped_roof_slab": "Warped Roofed Slab",
+
+
+"block.maidensmerrymaking.polished_blackstone_brick_snowy_slab": "Polished Blackstone Brick Snowy Slab",
+"block.maidensmerrymaking.deepslate_brick_snowy_slab": "Deepslate Brick Snowy Slab",
+"block.maidensmerrymaking.stone_brick_snowy_slab": "Stone Brick Snowy Slab",
 
 "block.maidensmerrymaking.acacia_picket_fence": "Acacia Picket Fence",
 "block.maidensmerrymaking.birch_picket_fence": "Birch Picket Fence",
@@ -326,45 +375,76 @@
 "block.maidensmerrymaking.end_stone_brick_garland_multi_wall": "End Stone BrickWall with Lit Garland (Multi Lights)",
 "block.maidensmerrymaking.diorite_garland_multi_wall": "Diorite Wall with Lit Garland (Multi Lights)",
 
-"block.maidensmerrymaking.mini_lights_horizontal": "Mini Lights Horizontal",
-"block.maidensmerrymaking.mini_lights_diagonal_left": "Mini Lights Diagonal Left",
-"block.maidensmerrymaking.mini_lights_diagonal_right": "Mini Lights Diagonal Right",
-"block.maidensmerrymaking.mini_lights_cap": "Mini Lights Cap",
+"block.maidensmerrymaking.mini_lights_horizontal": "Mini Lights (Horizontal)",
+"block.maidensmerrymaking.mini_lights_vertical_left": "Mini Lights (Vertical Left)",
+"block.maidensmerrymaking.mini_lights_vertical_right": "Mini Lights (Vertical Right)",
+"block.maidensmerrymaking.mini_corner_lights_vertical_left": "Mini Lights (Vertical Corner Left)",
+"block.maidensmerrymaking.mini_corner_lights_vertical_right": "Mini Lights (Vertical Corner Right)",
 
-"block.maidensmerrymaking.classic_lights_horizontal": "Classic Lights Horizontal",
-"block.maidensmerrymaking.classic_lights_diagonal_left": "Classic Lights Diagonal Left",
-"block.maidensmerrymaking.classic_lights_diagonal_right": "Classic Lights Diagonal Right",
-"block.maidensmerrymaking.classic_lights_cap": "Classic Lights Cap",
+"block.maidensmerrymaking.mini_lights_diagonal_left": "Mini Lights (Diagonal Left)",
+"block.maidensmerrymaking.mini_lights_diagonal_right": "Mini Lights (Diagonal Right)",
 
-"block.maidensmerrymaking.icicle_lights_horizontal": "Icicle Lights Horizontal",
-"block.maidensmerrymaking.icicle_lights_diagonal_left": "Icicle Lights Diagonal Left",
-"block.maidensmerrymaking.icicle_lights_diagonal_right": "Icicle Lights Diagonal Right",
-"block.maidensmerrymaking.icicle_lights_cap": "Icicle Lights Cap",
+"block.maidensmerrymaking.mini_lights_cap": "Mini Lights (Cap)",
 
-"block.maidensmerrymaking.twinkling_icicle_lights_horizontal": "Twinkling Icicle Lights Horizontal",
-"block.maidensmerrymaking.twinkling_icicle_lights_diagonal_left": "Twinkling Icicle Lights Diagonal Left",
-"block.maidensmerrymaking.twinkling_icicle_lights_diagonal_right": "Twinkling Icicle Lights Diagonal Right",
-"block.maidensmerrymaking.twinkling_icicle_lights_cap": "Twinkling Icicle Lights Cap",
+"block.maidensmerrymaking.classic_lights_horizontal": "Classic Lights (Horizontal)",
+"block.maidensmerrymaking.classic_lights_diagonal_left": "Classic Lights (Diagonal Left)",
+"block.maidensmerrymaking.classic_lights_diagonal_right": "Classic Lights (Diagonal Right)",
 
-"block.maidensmerrymaking.mini_multi_horizontal": "Mini Lights Multi Horizontal",
-"block.maidensmerrymaking.mini_multi_diagonal_left": "Mini Lights Multi Diagonal Left",
-"block.maidensmerrymaking.mini_multi_diagonal_right": "Mini Lights Multi Diagonal Right",
+"block.maidensmerrymaking.classic_lights_horizontal": "Classic Lights (Horizontal)",
+"block.maidensmerrymaking.classic_lights_vertical_left": "Classic Lights (Vertical Lefthand)",
+"block.maidensmerrymaking.classic_lights_vertical_right": "Classic Lights (Vertical Righthand)",
+"block.maidensmerrymaking.classic_lights_vertical_corner_right": "Classic Lights (Vertical Corner Righthand)",
+"block.maidensmerrymaking.classic_lights_vertical_corner_left": "Classic Lights (Vertical Corner Lefthand)",
+
+"block.maidensmerrymaking.classic_lights_cap": "Classic Lights (Cap)",
+
+"block.maidensmerrymaking.icicle_lights_horizontal": "Icicle Lights (Horizontal)",
+"block.maidensmerrymaking.icicle_lights_diagonal_left": "Icicle Lights (Diagonal Left)",
+"block.maidensmerrymaking.icicle_lights_diagonal_right": "Icicle Lights (Diagonal Right)",
+"block.maidensmerrymaking.icicle_lights_cap": "Icicle Lights (Cap)",
+
+"block.maidensmerrymaking.twinkling_icicle_lights_horizontal": "Twinkling Icicle Lights (Horizontal)",
+"block.maidensmerrymaking.twinkling_icicle_lights_diagonal_left": "Twinkling Icicle Lights (Diagonal Left)",
+"block.maidensmerrymaking.twinkling_icicle_lights_diagonal_right": "Twinkling Icicle Lights (Diagonal Right)",
+"block.maidensmerrymaking.twinkling_icicle_lights_cap": "Twinkling Icicle Lights (Cap)",
+
+"block.maidensmerrymaking.mini_multi_horizontal": "Mini Multicolored Lights (Horizontal)",
+"block.maidensmerrymaking.mini_multi_diagonal_left": "Mini Multicolored Lights (Diagonal Left)",
+"block.maidensmerrymaking.mini_multi_diagonal_right": "Mini Multicolored Lights (Diagonal Right)",
+
+"block.maidensmerrymaking.mini_multi_vertical_right": "Mini Multicolored Lights (Vertical Right)",
+"block.maidensmerrymaking.mini_multi_vertical_left": "Mini Multicolored Lights (Vertical Left)",
+"block.maidensmerrymaking.mini_corner_multi_vertical_right": "Mini MultiColored Lights (Vertical Corner Right)",
+"block.maidensmerrymaking.mini_corner_multi_vertical_left": "Mini Multicolored Lights (Vertical Corner Left)",
 "block.maidensmerrymaking.mini_multi_cap": "Mini Lights Multi Cap",
 
-"block.maidensmerrymaking.classic_multi_horizontal": "Classic Lights Multi Horizontal",
-"block.maidensmerrymaking.classic_multi_diagonal_left": "Classic Lights Multi Diagonal Left",
-"block.maidensmerrymaking.classic_multi_diagonal_right": "Classic Lights Multi Diagonal Right",
-"block.maidensmerrymaking.classic_multi_cap": "Classic Lights Multi Cap",
+"block.maidensmerrymaking.classic_multi_horizontal": "Classic Multicolored Lights (Horizontal)",
+"block.maidensmerrymaking.classic_multi_vertical_left": "Classic Multicolored Lights (Vertical Lefthand)",
+"block.maidensmerrymaking.classic_multi_vertical_right": "Classic Multicolored Lights (Vertical Righthand)",
+"block.maidensmerrymaking.classic_multi_vertical_corner_right": "Classic Multicolored Lights (Vertical Corner Righthand)",
+"block.maidensmerrymaking.classic_multi_vertical_corner_left": "Classic Multicolored Lights (Vertical Corner Lefthand)",
+"block.maidensmerrymaking.classic_multi_diagonal_left": "Classic Multicolored Lights (Diagonal Left)",
+"block.maidensmerrymaking.classic_multi_diagonal_right": "Classic Multicolored Lights (Diagonal Right)",
+"block.maidensmerrymaking.classic_multi_cap": "Classic Multicolored Lights (Cap)",
 
-"block.maidensmerrymaking.icicle_multi_horizontal": "Icicle Lights Multi Horizontal",
-"block.maidensmerrymaking.icicle_multi_diagonal_left": "Icicle Lights Multi Diagonal Left",
-"block.maidensmerrymaking.icicle_multi_diagonal_right": "Icicle Lights Multi Diagonal Right",
-"block.maidensmerrymaking.icicle_multi_cap": "Icicle Lights Multi Cap",
+"block.maidensmerrymaking.icicle_multi_horizontal": "Icicle Multicolored Lights (Horizontal)",
+"block.maidensmerrymaking.icicle_multi_diagonal_left": "Icicle Multicolored Lights (Diagonal Left)",
+"block.maidensmerrymaking.icicle_multi_diagonal_right": "Icicle Multicolored Lights (Diagonal Right)",
+"block.maidensmerrymaking.icicle_multi_cap": "Icicle Multicolored Lights (Cap)",
 
-"block.maidensmerrymaking.twinkling_icicle_multi_horizontal": "Twinkling Icicle Lights Multi Horizontal",
-"block.maidensmerrymaking.twinkling_icicle_multi_diagonal_left": "Twinkling Icicle Lights Multi Diagonal Left",
-"block.maidensmerrymaking.twinkling_icicle_multi_diagonal_right": "Twinkling Icicle Lights Multi Diagonal Right",
-"block.maidensmerrymaking.twinkling_icicle_multi_cap": "Twinkling Icicle Lights Multi Cap"
+"block.maidensmerrymaking.twinkling_icicle_multi_horizontal": "Twinkling Multicolored Icicle Lights (Horizontal)",
+"block.maidensmerrymaking.twinkling_icicle_multi_diagonal_left": "Twinkling MulticoloredIcicle Lights (Diagonal Left)",
+"block.maidensmerrymaking.twinkling_icicle_multi_diagonal_right": "Twinkling MulticoloredIcicle Lights (Diagonal Right)",
+"block.maidensmerrymaking.twinkling_icicle_multi_cap": "Twinkling MulticoloredIcicle Lights (Cap)",
+
+"block.maidensmerrymaking.spruce_leaves_lights_white": "Spruce Leaves (White Lights)",
+"block.maidensmerrymaking.spruce_leaves_lights_multi": "Spruce Leaves (Multicolored Lights)",
+"block.maidensmerrymaking.spruce_leaves_lights_large_white": "Spruce Leaves (Classic White Lights)",
+"block.maidensmerrymaking.spruce_leaves_lights_large_multi": "Spruce Leaves (Classic Multicolored Lights)",
+"block.maidensmerrymaking.spruce_leaves_holly": "Spruce Leaves (Holly Berries)"
+
+
+
 	
 	
 	

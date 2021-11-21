@@ -4,8 +4,7 @@ import com.maideniles.maidensmerrymaking.MaidensMerryMaking;
 import com.maideniles.maidensmerrymaking.blocks.*;
 import com.maideniles.maidensmerrymaking.blocks.crop.*;
 import com.maideniles.maidensmerrymaking.blocks.deco.*;
-
-
+import com.maideniles.maidensmerrymaking.blocks.deco.lights.*;
 import com.maideniles.maidensmerrymaking.blocks.fireplace.logs.Fireplace;
 import com.maideniles.maidensmerrymaking.blocks.fireplace.logs.FireplaceLogsOn;
 import com.maideniles.maidensmerrymaking.blocks.fireplace.mantel.base.*;
@@ -51,10 +50,13 @@ public class ModBlocks {
     public static final RegistryObject<Block>   TINY_SPRUCE = registerBlock("tiny_spruce",
             () -> new GrowableTinySpruce(Block.Properties.of(Material.PLANT).strength(0.5F).noOcclusion().sound(SoundType.CROP)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+    public static final RegistryObject<Block>   HOLLY_SAPLING = registerBlock("holly_sapling",
+            () -> new GrowableHollyTree(Block.Properties.of(Material.PLANT).strength(0.5F).noOcclusion().sound(SoundType.CROP)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
 
 
     public static final RegistryObject<Block> CHRISTMAS_WREATH = registerBlock("christmas_wreath",
-            () -> new WreathBlock(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F).sound(SoundType.MOSS_CARPET)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+            () -> new WreathBlock(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F).sound(SoundType.MOSS_CARPET).noOcclusion()), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block> CHRISTMAS_WREATH_WHITE_LIGHTS = registerBlock("christmas_wreath_white_lights",
             () -> new WreathBlock(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F).sound(SoundType.MOSS_CARPET).noOcclusion().lightLevel((p_50828_) -> {
@@ -87,8 +89,12 @@ public class ModBlocks {
     public static final RegistryObject<Block> HARVEST_TRAY = registerBlock("harvest_tray",
            ()-> new TrayBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(0.4F, 2.0F).noOcclusion()),ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
-    public static final RegistryObject<Block> COOKIE_TRAY = registerBlock("cookie_tray",
+    //COOKIE TRAY//
+
+       public static final RegistryObject<Block> COOKIE_TRAY = registerBlock("cookie_tray",
             ()-> new TrayBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(0.4F, 2.0F).noOcclusion()),ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
 
     //KINARA//
         public static final RegistryObject<Block> KINARA = registerBlock("kinara",
@@ -113,6 +119,17 @@ public class ModBlocks {
 
     public static final RegistryObject<Block> MKEKA_WITH_CHALICE = registerBlock("mkeka_with_chalice",
             ()-> new MkekaWithChaliceBlock(BlockBehaviour.Properties.of(Material.CLOTH_DECORATION).noOcclusion().sound(SoundType.WOOL).strength(1.5F)),null);
+
+    public static final RegistryObject<Block> MKEKA_WITH_CORN_1 = registerBlock("mkeka_corn_1",
+            ()-> new MkekaBlock(BlockBehaviour.Properties.of(Material.CLOTH_DECORATION).strength(0.2F, 2.0F).noOcclusion().sound(SoundType.WOOL)),null);
+
+    public static final RegistryObject<Block> MKEKA_WITH_CORN_2 = registerBlock("mkeka_corn_2",
+            ()-> new MkekaBlock(BlockBehaviour.Properties.of(Material.CLOTH_DECORATION).strength(0.2F, 2.0F).noOcclusion().sound(SoundType.WOOL)),null);
+
+    public static final RegistryObject<Block> MKEKA_WITH_CORN_3 = registerBlock("mkeka_corn_3",
+            ()-> new MkekaBlock(BlockBehaviour.Properties.of(Material.CLOTH_DECORATION).strength(0.2F, 2.0F).noOcclusion().sound(SoundType.WOOL)),null);
+
+
 
     //MENORAH BLOCKS//
 
@@ -379,7 +396,7 @@ public static final RegistryObject<Block> GELT = registerBlock("gelt",
 //CLASSIC LIGHTS//
 
     public static final RegistryObject<Block>   CLASSIC_LIGHTS = registerBlock("classic_lights_horizontal",
-            () -> new LightsBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+            () -> new ConnectingClassicWhite(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>   CLASSIC_LIGHTS_DIAGONAL_LEFT = registerBlock("classic_lights_diagonal_left",
             () -> new LightsBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
@@ -390,9 +407,22 @@ public static final RegistryObject<Block> GELT = registerBlock("gelt",
     public static final RegistryObject<Block>   CLASSIC_LIGHTS_CAP = registerBlock("classic_lights_cap",
             () -> new LightsBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+    public static final RegistryObject<Block>   CLASSIC_LIGHTS_VERTICAL_LEFT = registerBlock("classic_lights_vertical_left",
+            () -> new LightsVerticalBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   CLASSIC_LIGHTS_VERTICAL_RIGHT = registerBlock("classic_lights_vertical_right",
+            () -> new LightsVerticalBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   CLASSIC_LIGHTS_VERTICAL_CORNER_LEFT = registerBlock("classic_lights_vertical_corner_left",
+            () -> new LightsVerticalBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   CLASSIC_LIGHTS_VERTICAL_CORNER_RIGHT = registerBlock("classic_lights_vertical_corner_right",
+            () -> new LightsVerticalBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
     //CLASSIC MULTI COLORED//
     public static final RegistryObject<Block>   CLASSIC_MULTI = registerBlock("classic_multi_horizontal",
-            () -> new LightsBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+            () -> new ConnectingClassicMulti(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>   CLASSIC_MULTI_DIAGONAL_LEFT = registerBlock("classic_multi_diagonal_left",
             () -> new LightsBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
@@ -403,10 +433,23 @@ public static final RegistryObject<Block> GELT = registerBlock("gelt",
     public static final RegistryObject<Block>   CLASSIC_MULTI_CAP = registerBlock("classic_multi_cap",
             () -> new LightsBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
+    public static final RegistryObject<Block>   CLASSIC_MULTI_VERTICAL_LEFT = registerBlock("classic_multi_vertical_left",
+            () -> new LightsVerticalBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   CLASSIC_MULTI_VERTICAL_RIGHT = registerBlock("classic_multi_vertical_right",
+            () -> new LightsVerticalBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   CLASSIC_MULTI_VERTICAL_CORNER_LEFT = registerBlock("classic_multi_vertical_corner_left",
+            () -> new LightsVerticalBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   CLASSIC_MULTI_VERTICAL_CORNER_RIGHT = registerBlock("classic_multi_vertical_corner_right",
+            () -> new LightsVerticalBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
 
     //ICICLE LIGHTS//
     public static final RegistryObject<Block>   ICICLE_LIGHTS = registerBlock("icicle_lights_horizontal",
-            () -> new LightsBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+            () -> new ConnectingIcicleWhite(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>   ICICLE_LIGHTS_DIAGONAL_LEFT = registerBlock("icicle_lights_diagonal_left",
             () -> new LightsBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
@@ -419,7 +462,7 @@ public static final RegistryObject<Block> GELT = registerBlock("gelt",
 
     //ICICLE MULTI COLORED//
     public static final RegistryObject<Block>   ICICLE_MULTI = registerBlock("icicle_multi_horizontal",
-            () -> new LightsBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+            () -> new ConnectingIcicleMulti(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>   ICICLE_MULTI_DIAGONAL_LEFT = registerBlock("icicle_multi_diagonal_left",
             () -> new LightsBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
@@ -432,7 +475,7 @@ public static final RegistryObject<Block> GELT = registerBlock("gelt",
 
     //TWINKLING_ICICLE LIGHTS//
     public static final RegistryObject<Block>   TWINKLING_ICICLE_LIGHTS = registerBlock("twinkling_icicle_lights_horizontal",
-            () -> new LightsBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+            () -> new ConnectingTwinklingIcicleWhite(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>   TWINKLING_ICICLE_LIGHTS_DIAGONAL_LEFT = registerBlock("twinkling_icicle_lights_diagonal_left",
             () -> new LightsBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
@@ -445,7 +488,7 @@ public static final RegistryObject<Block> GELT = registerBlock("gelt",
 
     //TWINKLING_ICICLE MULTI COLORED//
     public static final RegistryObject<Block>   TWINKLING_ICICLE_MULTI = registerBlock("twinkling_icicle_multi_horizontal",
-            () -> new LightsBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+            () -> new ConnectingTwinklingIcicleMulti(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>   TWINKLING_ICICLE_MULTI_DIAGONAL_LEFT = registerBlock("twinkling_icicle_multi_diagonal_left",
             () -> new LightsBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
@@ -458,7 +501,7 @@ public static final RegistryObject<Block> GELT = registerBlock("gelt",
 
     //MINI LIGHTS//
     public static final RegistryObject<Block>   MINI_LIGHTS = registerBlock("mini_lights_horizontal",
-            () -> new LightsBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+            () -> new ConnectingMiniWhite(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>   MINI_LIGHTS_DIAGONAL_LEFT = registerBlock("mini_lights_diagonal_left",
             () -> new LightsBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
@@ -468,11 +511,36 @@ public static final RegistryObject<Block> GELT = registerBlock("gelt",
 
     public static final RegistryObject<Block>   MINI_LIGHTS_CAP = registerBlock("mini_lights_cap",
             () -> new LightsBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+//MINI VERTICAL//
+    public static final RegistryObject<Block>   MINI_LIGHTS_VERTICAL_RIGHT = registerBlock("mini_lights_vertical_right",
+            () -> new LightsVerticalBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   MINI_LIGHTS_VERTICAL_LEFT = registerBlock("mini_lights_vertical_left",
+            () -> new LightsVerticalBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   MINI_MULTI_VERTICAL_RIGHT = registerBlock("mini_multi_vertical_right",
+            () -> new LightsVerticalBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   MINI_MULTI_VERTICAL_LEFT = registerBlock("mini_multi_vertical_left",
+            () -> new LightsVerticalBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+//MINI CORNER VERTICAL//
+    public static final RegistryObject<Block>   MINI_CORNER_LIGHTS_VERTICAL_RIGHT = registerBlock("mini_corner_lights_vertical_right",
+            () -> new LightsVerticalBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   MINI_CORNER_LIGHTS_VERTICAL_LEFT = registerBlock("mini_corner_lights_vertical_left",
+            () -> new LightsVerticalBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   MINI_CORNER_MULTI_VERTICAL_RIGHT = registerBlock("mini_corner_multi_vertical_right",
+            () -> new LightsVerticalBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   MINI_CORNER_MULTI_VERTICAL_LEFT = registerBlock("mini_corner_multi_vertical_left",
+            () -> new LightsVerticalBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
 
 
     //MINI MULTI COLORED//
     public static final RegistryObject<Block>   MINI_MULTI = registerBlock("mini_multi_horizontal",
-            () -> new LightsBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+            () -> new ConnectingMiniMulti(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>   MINI_MULTI_DIAGONAL_LEFT = registerBlock("mini_multi_diagonal_left",
             () -> new LightsBlock(Block.Properties.of(Material.GLASS).strength(0.5F, 2.0F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
@@ -512,15 +580,70 @@ public static final RegistryObject<Block> GELT = registerBlock("gelt",
 
     //GARLAND BLOCKS--HORIZONTAL//
     public static final RegistryObject<Block>   GARLAND_HORIZONTAL = registerBlock("garland_horizontal",
-            () -> new GarlandBlock(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F)
+            () -> new ConnectingGarland(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F)
                     .noOcclusion().sound(SoundType.BAMBOO_SAPLING)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>   GARLAND_HORIZONTAL_LIGHTS_WHITE = registerBlock("garland_horizontal_lights",
-            () -> new GarlandBlock(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F)
+            () -> new ConnectingGarlandWhite(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F)
                     .noOcclusion().sound(SoundType.BAMBOO_SAPLING).lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>   GARLAND_HORIZONTAL_LIGHTS_MULTI = registerBlock("garland_horizontal_multi",
-            () -> new GarlandBlock(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F)
+            () -> new ConnectingGarlandMulti(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F)
+                    .noOcclusion().sound(SoundType.BAMBOO_SAPLING).lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    //GARLAND-VERTICAL//
+
+    public static final RegistryObject<Block>   GARLAND_VERTICAL_LEFT = registerBlock("garland_vertical_left",
+            () -> new GarlandVerticalBlock(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F)
+                    .noOcclusion().sound(SoundType.BAMBOO_SAPLING)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   GARLAND_VERTICAL_RIGHT = registerBlock("garland_vertical_right",
+            () -> new GarlandVerticalRight(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F)
+                    .noOcclusion().sound(SoundType.BAMBOO_SAPLING)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
+    public static final RegistryObject<Block>   GARLAND_VERTICAL_LIGHTS_WHITE_LEFT = registerBlock("garland_vertical_lights_left",
+            () -> new GarlandVerticalBlock(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F)
+                    .noOcclusion().sound(SoundType.BAMBOO_SAPLING).lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   GARLAND_VERTICAL_LIGHTS_WHITE_RIGHT = registerBlock("garland_vertical_lights_right",
+            () -> new GarlandVerticalRight(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F)
+                    .noOcclusion().sound(SoundType.BAMBOO_SAPLING).lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   GARLAND_VERTICAL_LIGHTS_MULTI_LEFT = registerBlock("garland_vertical_multi_left",
+            () -> new GarlandVerticalBlock(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F)
+                    .noOcclusion().sound(SoundType.BAMBOO_SAPLING).lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   GARLAND_VERTICAL_LIGHTS_MULTI_RIGHT = registerBlock("garland_vertical_multi_right",
+            () -> new GarlandVerticalRight(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F)
+                    .noOcclusion().sound(SoundType.BAMBOO_SAPLING).lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
+    //GARLAND VERTICAL CORNERS//
+    public static final RegistryObject<Block>   GARLAND_VERTICAL_CORNER_LEFT = registerBlock("garland_vertical_corner_left",
+            () -> new GarlandVerticalCornerBlock(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F)
+                    .noOcclusion().sound(SoundType.BAMBOO_SAPLING)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   GARLAND_VERTICAL_CORNER_RIGHT = registerBlock("garland_vertical_corner_right",
+            () -> new GarlandVerticalCornerRightBlock(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F)
+                    .noOcclusion().sound(SoundType.BAMBOO_SAPLING)) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
+    public static final RegistryObject<Block>   GARLAND_VERTICAL_CORNER_LIGHTS_LEFT = registerBlock("garland_vertical_corner_lights_left",
+            () -> new GarlandVerticalCornerBlock(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F)
+                    .noOcclusion().sound(SoundType.BAMBOO_SAPLING).lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   GARLAND_VERTICAL_CORNER_LIGHTS_RIGHT = registerBlock("garland_vertical_corner_lights_right",
+            () -> new GarlandVerticalCornerRightBlock(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F)
+                    .noOcclusion().sound(SoundType.BAMBOO_SAPLING).lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
+    public static final RegistryObject<Block>   GARLAND_VERTICAL_CORNER_MULTI_LEFT = registerBlock("garland_vertical_corner_multi_left",
+            () -> new GarlandVerticalCornerBlock(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F)
+                    .noOcclusion().sound(SoundType.BAMBOO_SAPLING).lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>   GARLAND_VERTICAL_CORNER_MULTI_RIGHT = registerBlock("garland_vertical_corner_multi_right",
+            () -> new GarlandVerticalCornerRightBlock(Block.Properties.of(Material.PLANT).strength(0.5F, 2.0F)
                     .noOcclusion().sound(SoundType.BAMBOO_SAPLING).lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
 
@@ -556,42 +679,122 @@ public static final RegistryObject<Block> GELT = registerBlock("gelt",
     public static final RegistryObject<Block> ROOF_CRIMSON_STAIRS = registerBlock( "roof_crimson_stairs",
             () -> new SnowyStairsBlock( Blocks.SPRUCE_PLANKS.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(0.5F, 2.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+//ROOF TILES OTHER STAIRS//
+public static final RegistryObject<Block> ROOF_POLISHED_BLACKSTONE_BRICK_STAIRS = registerBlock( "roof_polished_blackstone_brick_stairs",
+        () -> new StairBlock(() -> Blocks.SMOOTH_QUARTZ.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
+                .strength(0.5F, 2.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> ROOF_DEEPSLATE_BRICK_STAIRS = registerBlock( "roof_deepslate_brick_stairs",
+            () -> new StairBlock(() -> Blocks.SMOOTH_QUARTZ.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(0.5F, 2.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> ROOF_STONE_BRICK_STAIRS = registerBlock( "roof_stone_brick_stairs",
+            () -> new StairBlock(() -> Blocks.SMOOTH_QUARTZ.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(0.5F, 2.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
+
+
 
 
     //TESTING SNOW ON STAIRS//
     public static final RegistryObject<Block> SNOWY_ACACIA_STAIRS = registerBlock( "snowy_acacia_stairs",
-            () -> new StairBlock(() -> Blocks.ACACIA_PLANKS.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
+            () -> new StairBlock(() -> Blocks.SMOOTH_QUARTZ.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(0.5F, 2.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block> SNOWY_BIRCH_STAIRS = registerBlock( "snowy_birch_stairs",
-            () -> new StairBlock(() -> Blocks.BIRCH_PLANKS.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
+            () -> new StairBlock(() -> Blocks.SMOOTH_QUARTZ.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(0.5F, 2.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block> SNOWY_DARK_OAK_STAIRS = registerBlock( "snowy_dark_oak_stairs",
-            () -> new StairBlock(() -> Blocks.DARK_OAK_PLANKS.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
+            () -> new StairBlock(() -> Blocks.SMOOTH_QUARTZ.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(0.5F, 2.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block> SNOWY_JUNGLE_STAIRS = registerBlock( "snowy_jungle_stairs",
-            () -> new StairBlock(() -> Blocks.JUNGLE_PLANKS.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
+            () -> new StairBlock(() -> Blocks.SMOOTH_QUARTZ.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(0.5F, 2.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block> SNOWY_OAK_STAIRS= registerBlock( "snowy_oak_stairs",
-            () -> new StairBlock(() -> Blocks.OAK_PLANKS.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
+            () -> new StairBlock(() -> Blocks.SMOOTH_QUARTZ.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(0.5F, 2.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block> SNOWY_SPRUCE_STAIRS = registerBlock( "snowy_spruce_stairs",
-            () -> new StairBlock(() -> Blocks.SPRUCE_PLANKS.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
+            () -> new StairBlock(() -> Blocks.SMOOTH_QUARTZ.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(0.5F, 2.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block> SNOWY_WARPED_STAIRS = registerBlock( "snowy_warped_stairs",
-            () -> new StairBlock(() -> Blocks.SPRUCE_PLANKS.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
+            () -> new StairBlock(() -> Blocks.SMOOTH_QUARTZ.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(0.5F, 2.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block> SNOWY_CRIMSON_STAIRS = registerBlock( "snowy_crimson_stairs",
-            () -> new StairBlock(() -> Blocks.SPRUCE_PLANKS.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
+            () -> new StairBlock(() -> Blocks.SMOOTH_QUARTZ.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
                     .strength(0.5F, 2.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
-//WREATH DOORS//
+//SNOWY OTHER STAIRS//
+    public static final RegistryObject<Block> SNOWY_POLISHED_BLACKSTONE_BRICK_STAIRS = registerBlock( "snowy_polished_blackstone_brick_stairs",
+            () -> new StairBlock(() -> Blocks.SMOOTH_QUARTZ.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(0.5F, 2.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> SNOWY_DEEPSLATE_BRICK_STAIRS = registerBlock( "snowy_deepslate_brick_stairs",
+            () -> new StairBlock(() -> Blocks.SMOOTH_QUARTZ.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(0.5F, 2.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> SNOWY_STONE_BRICK_STAIRS = registerBlock( "snowy_stone_brick_stairs",
+            () -> new StairBlock(() -> Blocks.SMOOTH_QUARTZ.defaultBlockState(), BlockBehaviour.Properties.of(Material.WOOD)
+                    .strength(0.5F, 2.0F)), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block> ACACIA_ROOF_SLAB = registerBlock("acacia_roof_slab",
+            () -> new SnowySlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+    public static final RegistryObject<Block> BIRCH_ROOF_SLAB = registerBlock("birch_roof_slab",
+            () -> new SnowySlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+    public static final RegistryObject<Block> OAK_ROOF_SLAB = registerBlock("oak_roof_slab",
+            () -> new SnowySlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+    public static final RegistryObject<Block> DARK_OAK_ROOF_SLAB = registerBlock("dark_oak_roof_slab",
+            () -> new SnowySlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+    public static final RegistryObject<Block> SPRUCE_ROOF_SLAB = registerBlock("spruce_roof_slab",
+            () -> new SnowySlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+    public static final RegistryObject<Block> JUNGLE_ROOF_SLAB = registerBlock("jungle_roof_slab",
+            () -> new SnowySlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+    public static final RegistryObject<Block> CRIMSON_ROOF_SLAB = registerBlock("crimson_roof_slab",
+            () -> new SnowySlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+    public static final RegistryObject<Block> WARPED_ROOF_SLAB = registerBlock("warped_roof_slab",
+            () -> new SnowySlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+    public static final RegistryObject<Block> POLISHED_BLACKSTONE_BRICK_ROOF_SLAB = registerBlock("polished_blackstone_brick_roof_slab",
+            () -> new SnowySlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+    public static final RegistryObject<Block> DEEPSLATE_BRICK_ROOF_SLAB = registerBlock("deepslate_brick_roof_slab",
+            () -> new SnowySlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+    public static final RegistryObject<Block> STONE_BRICK_ROOF_SLAB = registerBlock("stone_brick_roof_slab",
+            () -> new SnowySlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+
+
+    public static final RegistryObject<Block> ACACIA_SNOWY_SLAB = registerBlock("acacia_snowy_slab",
+           () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+    public static final RegistryObject<Block> BIRCH_SNOWY_SLAB = registerBlock("birch_snowy_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+    public static final RegistryObject<Block> OAK_SNOWY_SLAB = registerBlock("oak_snowy_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+    public static final RegistryObject<Block> DARK_OAK_SNOWY_SLAB = registerBlock("dark_oak_snowy_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+    public static final RegistryObject<Block> SPRUCE_SNOWY_SLAB = registerBlock("spruce_snowy_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+    public static final RegistryObject<Block> JUNGLE_SNOWY_SLAB = registerBlock("jungle_snowy_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+    public static final RegistryObject<Block> CRIMSON_SNOWY_SLAB = registerBlock("crimson_snowy_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+    public static final RegistryObject<Block> WARPED_SNOWY_SLAB = registerBlock("warped_snowy_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+    public static final RegistryObject<Block> POLISHED_BLACKSTONE_BRICK_SNOWY_SLAB = registerBlock("polished_blackstone_brick_snowy_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+    public static final RegistryObject<Block> DEEPSLATE_BRICK_SNOWY_SLAB = registerBlock("deepslate_brick_snowy_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+    public static final RegistryObject<Block> STONE_BRICK_SNOWY_SLAB = registerBlock("stone_brick_snowy_slab",
+            () -> new SlabBlock(BlockBehaviour.Properties.copy(Blocks.SNOW)));
+
+
+
+
+
+    //WREATH DOORS//
     public static final RegistryObject<Block> ACACIA_WREATH_DOOR = registerBlock("acacia_wreath_door",
             () -> new MaidensDoorBlock(Block.Properties.copy(Blocks.OAK_DOOR).strength(0.5F, 2.0F)));
 
@@ -989,6 +1192,25 @@ public static final RegistryObject<Block> GELT = registerBlock("gelt",
     public static final RegistryObject<Block>DEEPSLATE_TILE_GARLAND_LIGHTS_WALL= registerBlock("deepslate_tile_garland_lights_wall", () -> new WallBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(0.6F, 2.5F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
     public static final RegistryObject<Block>DEEPSLATE_TILE_GARLAND_MULTI_WALL= registerBlock("deepslate_tile_garland_multi_wall", () -> new WallBlock(BlockBehaviour.Properties.of(Material.WOOD).strength(0.6F, 2.5F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+//LEAVES-BUSHES//
+ public static final RegistryObject<Block>SPRUCE_LEAVES_HOLLY= registerBlock("spruce_leaves_holly",
+         () -> new Block(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F, 2.5F).noOcclusion()), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>SPRUCE_LEAVES_LIGHTS_WHITE= registerBlock("spruce_leaves_lights_white",
+            () -> new Block(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F, 2.5F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>SPRUCE_LEAVES_LIGHTS_LARGE_WHITE= registerBlock("spruce_leaves_lights_large_white",
+            () -> new Block(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F, 2.5F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>SPRUCE_LEAVES_LIGHTS_MULTI= registerBlock("spruce_leaves_lights_multi",
+            () -> new Block(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F, 2.5F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+    public static final RegistryObject<Block>SPRUCE_LEAVES_LIGHTS_LARGE_MULTI= registerBlock("spruce_leaves_lights_large_multi",
+            () -> new Block(BlockBehaviour.Properties.of(Material.LEAVES).strength(0.2F, 2.5F).noOcclusion().lightLevel((p_50828_) -> { return 12; })), ModItemGroups.MAIDENS_BLOCKS_GROUP);
+
+
+
 
 
 

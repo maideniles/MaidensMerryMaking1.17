@@ -73,6 +73,24 @@ public class SnowyStairsBlock extends StairBlock {
                 level.setBlock(pos, ModBlocks.SNOWY_CRIMSON_STAIRS.get().defaultBlockState().setValue(FACING, state.getValue(FACING)).setValue(HALF, state.getValue(HALF)).setValue(SHAPE, state.getValue(SHAPE)),3);
                 snow.shrink(1);
             }
+
+            if (snow.getItem() == Items.SNOWBALL && blockstate.getBlock() == ModBlocks.ROOF_POLISHED_BLACKSTONE_BRICK_STAIRS.get() ) {
+                System.out.println("GO GO SNOWY STAIRS!!");
+                level.setBlock(pos, ModBlocks.SNOWY_POLISHED_BLACKSTONE_BRICK_STAIRS.get().defaultBlockState().setValue(FACING, state.getValue(FACING)).setValue(HALF, state.getValue(HALF)).setValue(SHAPE, state.getValue(SHAPE)),3);
+                snow.shrink(1);
+            }
+
+            if (snow.getItem() == Items.SNOWBALL && blockstate.getBlock() == ModBlocks.ROOF_DEEPSLATE_BRICK_STAIRS.get() ) {
+                System.out.println("GO GO SNOWY STAIRS!!");
+                level.setBlock(pos, ModBlocks.SNOWY_DEEPSLATE_BRICK_STAIRS.get().defaultBlockState().setValue(FACING, state.getValue(FACING)).setValue(HALF, state.getValue(HALF)).setValue(SHAPE, state.getValue(SHAPE)),3);
+                snow.shrink(1);
+            }
+
+            if (snow.getItem() == Items.SNOWBALL && blockstate.getBlock() == ModBlocks.ROOF_STONE_BRICK_STAIRS.get() ) {
+                System.out.println("GO GO SNOWY STAIRS!!");
+                level.setBlock(pos, ModBlocks.SNOWY_STONE_BRICK_STAIRS.get().defaultBlockState().setValue(FACING, state.getValue(FACING)).setValue(HALF, state.getValue(HALF)).setValue(SHAPE, state.getValue(SHAPE)),3);
+                snow.shrink(1);
+            }
         }
         return InteractionResult.FAIL;
     }

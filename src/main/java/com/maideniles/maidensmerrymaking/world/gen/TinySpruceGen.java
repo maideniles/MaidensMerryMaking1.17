@@ -28,7 +28,12 @@ public class TinySpruceGen {
             base.add(() -> ModConfiguredFeatures.CHRISTMAS
                     .decorated(Features.Decorators.HEIGHTMAP_SQUARE).count(1)
                     .decorated(FeatureDecorator.COUNT_EXTRA.configured(new FrequencyWithExtraChanceDecoratorConfiguration
-                            (1, 0.5f,2))));
+                            (0, 0.1f,1))));
+
+            base.add(() -> ModConfiguredFeatures.HOLLY
+                    .decorated(Features.Decorators.HEIGHTMAP_SQUARE).count(1)
+                    .decorated(FeatureDecorator.COUNT_EXTRA.configured(new FrequencyWithExtraChanceDecoratorConfiguration
+                            (0, 0.1f,1))));
         }
     }
 }

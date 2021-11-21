@@ -10,6 +10,9 @@ public class ModConfiguredFeatures {
     public static final ConfiguredFeature<?, ?> CHRISTMAS =
             register("christmas", ModFeatures.CHRISTMAS_TREE.get().configured(FeatureConfiguration.NONE));
 
+    public static final ConfiguredFeature<?, ?> HOLLY =
+            register("holly", ModFeatures.HOLLY_TREE.get().configured(FeatureConfiguration.NONE));
+
     private static <FC extends FeatureConfiguration> ConfiguredFeature<FC, ?>
     register(String p_243968_0_, ConfiguredFeature<FC, ?> p_243968_1_) {
         return Registry.register(BuiltinRegistries.CONFIGURED_FEATURE, p_243968_0_, p_243968_1_);

@@ -2,6 +2,7 @@ package com.maideniles.maidensmerrymaking.blocks.deco;
 
 import com.maideniles.maidensmerrymaking.blocks.fireplace.logs.FireplaceLogsOn;
 import com.maideniles.maidensmerrymaking.init.ModBlocks;
+import com.maideniles.maidensmerrymaking.init.ModItems;
 import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
@@ -54,9 +55,10 @@ public class MkekaBlock extends HorizontalDecoBlock{
 
 
         ItemStack stack = player.getItemInHand(hand);
+        Block block = level.getBlockState(pos).getBlock();
 
         if (!level.isClientSide()) {
-            if(stack.getItem() == Item.byBlock(ModBlocks.KINARA.get())) {
+            if (stack.getItem() == Item.byBlock(ModBlocks.KINARA.get())) {
                 level.setBlock(pos, ModBlocks.MKEKA_WITH_KINARA.get().defaultBlockState().setValue(FACING, state.getValue(FACING)).setValue(MkekaWithKinaraBlock.LIT, Boolean.FALSE), 3);
                 level.setBlock(pos.above(), Blocks.AIR.defaultBlockState(), 3);
 
@@ -64,26 +66,66 @@ public class MkekaBlock extends HorizontalDecoBlock{
                 stack.shrink(1);
             }
 
-                if (stack.getItem() == Item.byBlock(ModBlocks.CHALICE.get())) {
-                    level.setBlock(pos, ModBlocks.MKEKA_WITH_CHALICE.get().defaultBlockState().setValue(FACING, state.getValue(FACING)).setValue(MkekaWithChaliceBlock.CUP, Boolean.TRUE), 3);
-                    level.setBlock(pos.above(), Blocks.AIR.defaultBlockState(), 3);
+            if (stack.getItem() == Item.byBlock(ModBlocks.CHALICE.get())) {
+                level.setBlock(pos, ModBlocks.MKEKA_WITH_CHALICE.get().defaultBlockState().setValue(FACING, state.getValue(FACING)).setValue(MkekaWithChaliceBlock.CUP, Boolean.TRUE), 3);
+                level.setBlock(pos.above(), Blocks.AIR.defaultBlockState(), 3);
 
-                    System.out.println("PLACED CHALICE ON MAT");
-                    stack.shrink(1);
-                }
-
-                return InteractionResult.SUCCESS;
-
+                System.out.println("PLACED CHALICE ON MAT");
+                stack.shrink(1);
             }
 
+            if (stack.getItem() == ModItems.CORN.get() && block == ModBlocks.MKEKA.get()) {
 
+                level.setBlock(pos, ModBlocks.MKEKA_WITH_CORN_1.get().defaultBlockState().setValue(FACING, state.getValue(FACING)), 3);
+                level.setBlock(pos.above(), Blocks.AIR.defaultBlockState(), 3);
 
+                System.out.println("PLACED CORN ON MAT");
+                stack.shrink(1);
+            }
+
+            if (stack.getItem() == ModItems.CORN.get() && block == ModBlocks.MKEKA_WITH_CORN_1.get()) {
+                level.setBlock(pos, ModBlocks.MKEKA_WITH_CORN_2.get().defaultBlockState().setValue(FACING, state.getValue(FACING)), 3);
+                level.setBlock(pos.above(), Blocks.AIR.defaultBlockState(), 3);
+
+                System.out.println("PLACED 2 CORN ON MAT");
+                stack.shrink(1);
+            }
+
+            if (stack.getItem() == ModItems.CORN.get() && block == ModBlocks.MKEKA_WITH_CORN_2.get()) {
+                level.setBlock(pos, ModBlocks.MKEKA_WITH_CORN_3.get().defaultBlockState().setValue(FACING, state.getValue(FACING)), 3);
+                level.setBlock(pos.above(), Blocks.AIR.defaultBlockState(), 3);
+
+                System.out.println("PLACED 3 CORN ON MAT");
+                stack.shrink(1);
+            }
+
+            return InteractionResult.FAIL;
+
+        }
 
         return InteractionResult.sidedSuccess(level.isClientSide);
 
 
 }
+    @Override
+    public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
+Block corn = level.getBlockState(pos).getBlock();
 
+if(corn == ModBlocks.MKEKA_WITH_CORN_1.get()){
+    popResource(level, pos, new ItemStack(ModItems.CORN.get(),1));
+    System.out.println("DROPPED 1 CORN");
+}
+        if(corn == ModBlocks.MKEKA_WITH_CORN_2.get()){
+            popResource(level, pos, new ItemStack(ModItems.CORN.get(),2));
+            System.out.println("DROPPED 2 CORN");
+        }
+
+        if(corn == ModBlocks.MKEKA_WITH_CORN_3.get()){
+            popResource(level, pos, new ItemStack(ModItems.CORN.get(),3));
+            System.out.println("DROPPED 3 CORN");
+        }
+
+    }
 
 
 }

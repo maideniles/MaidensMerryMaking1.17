@@ -9,10 +9,10 @@ import net.minecraft.world.phys.shapes.VoxelShape;
 
 public class WreathBlock extends HorizontalDecoBlock {
 
-    protected static final VoxelShape WEST_AABB = Block.box(0.0D, 0.0D, 0.0D, 1.0D, 16.0D, 16.0D);
-    protected static final VoxelShape EAST_AABB = Block.box(15.0D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
-    protected static final VoxelShape NORTH_AABB = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 1.0D);
-    protected static final VoxelShape SOUTH_AABB = Block.box(0.0D, 0.0D, 15.0D, 16.0D, 16.0D, 16.0D);
+    protected static final VoxelShape WEST_AABB = Block.box(0.0D, 0.0D, 0.0D, 3.5D, 16.0D, 16.0D);
+    protected static final VoxelShape EAST_AABB = Block.box(12.5D, 0.0D, 0.0D, 16.0D, 16.0D, 16.0D);
+    protected static final VoxelShape NORTH_AABB = Block.box(0.0D, 0.0D, 0.0D, 16.0D, 16.0D, 3.5D);
+    protected static final VoxelShape SOUTH_AABB = Block.box(0.0D, 0.0D, 12.5D, 16.0D, 16.0D, 16.0D);
 
     public WreathBlock(Properties properties) {
         super(properties);

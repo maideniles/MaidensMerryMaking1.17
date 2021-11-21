@@ -10,6 +10,9 @@ import net.minecraftforge.fml.common.Mod;
 public class ModWorldGen {
     @SubscribeEvent
     public static void biomeLoadingEvent(final BiomeLoadingEvent event) {
+
         TinySpruceGen.setupTreeGen(event);
+
+
     }
 }

@@ -8,6 +8,7 @@ import net.minecraft.core.BlockPos;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.Item;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.item.context.BlockPlaceContext;
@@ -91,10 +92,8 @@ public class MkekaWithKinaraBlock extends HorizontalDecoBlock{
     @Override
     public void playerWillDestroy(Level level, BlockPos pos, BlockState state, Player player) {
 
-        popResource(level, pos, new ItemStack(Items.BLACK_CANDLE,1));
-        popResource(level, pos, new ItemStack(Items.RED_CANDLE,3));
-        popResource(level, pos, new ItemStack(Items.GREEN_CANDLE,3));
-        System.out.println("DROPPED_CANDLES");
+        popResource(level, pos, new ItemStack(Item.byBlock(ModBlocks.MKEKA.get()), 1));
+
     }
 
 
