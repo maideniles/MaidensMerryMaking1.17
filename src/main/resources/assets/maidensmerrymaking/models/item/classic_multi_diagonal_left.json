@@ -1,5 +1,5 @@
 {
-    "parent": "maidensmerrymaking:block/classic_multi_diagonal_left",
+    "parent": "maidensmerrymaking:block/classic_multi_diagonal_left_1",
   "display": {
         "thirdperson": {
             "rotation": [ 65, -57, 0 ],

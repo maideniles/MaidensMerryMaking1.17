@@ -14,6 +14,10 @@ import com.maideniles.maidensmerrymaking.blocks.lamppost.LampPostBottom;
 import com.maideniles.maidensmerrymaking.blocks.lamppost.LampPostOn;
 import com.maideniles.maidensmerrymaking.blocks.lamppost.LampPostPole;
 import com.maideniles.maidensmerrymaking.blocks.tree.*;
+import com.maideniles.maidensmerrymaking.blocks.tree.decorated.DecoratedTreeBottomBlock;
+import com.maideniles.maidensmerrymaking.blocks.tree.decorated.DecoratedTreeMiddleBlock;
+import com.maideniles.maidensmerrymaking.blocks.tree.decorated.DecoratedTreeTopBlock;
+import com.maideniles.maidensmerrymaking.blocks.tree.lights.*;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.CreativeModeTab;
 import net.minecraft.world.item.Item;
@@ -68,7 +72,7 @@ public class ModBlocks {
 
     //TOPPERS//
     public static final RegistryObject<Block> STAR_TOPPER = registerBlock("star_topper",
-            () -> new TopperBlock(Block.Properties.of(Material.METAL).strength(0.5F, 2.0F).sound(SoundType.LARGE_AMETHYST_BUD).noOcclusion()), null);
+            () -> new TopperBlock(Block.Properties.of(Material.METAL).strength(0.5F, 2.0F).lightLevel((p_50828_) -> { return 10; }).sound(SoundType.LARGE_AMETHYST_BUD).noOcclusion()), null);
 
     public static final RegistryObject<Block> BOW_TOPPER = registerBlock("bow_topper",
             () -> new TopperBlock(Block.Properties.of(Material.CLOTH_DECORATION).strength(0.5F, 2.0F).sound(SoundType.WOOL).noOcclusion()), null);
@@ -152,7 +156,7 @@ public static final RegistryObject<Block> GELT = registerBlock("gelt",
     public static final RegistryObject<Block>   CHRISTMAS_TREE_STAND = registerBlock("christmas_tree_stand",
             () -> new TreeStandBlock(Block.Properties.of(Material.STONE).strength(0.5F, 2.0F).noOcclusion()) , ModItemGroups.MAIDENS_BLOCKS_GROUP);
 
-
+//PLAIN TREE//
     public static final RegistryObject<Block>   CHRISTMAS_TREE_BOTTOM = registerBlock("christmas_tree_bottom",
             () -> new ChristmasTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().sound(SoundType.CROP)) , null);
 
@@ -162,25 +166,94 @@ public static final RegistryObject<Block> GELT = registerBlock("gelt",
     public static final RegistryObject<Block>   CHRISTMAS_TREE_TOP = registerBlock("christmas_tree_top",
             () -> new ChristmasTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().sound(SoundType.CROP)) , null);
 
-    //CHRISTMAS TREE WHITE LIGHTS//
+    // WHITE LIGHTS//
     public static final RegistryObject<Block>   CHRISTMAS_TREE_WHITE_LIGHTS_BOTTOM = registerBlock("christmas_tree_white_lights_bottom",
-            () -> new ChristmasTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
+            () -> new LightsChristmasTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
 
     public static final RegistryObject<Block>   CHRISTMAS_TREE_WHITE_LIGHTS_MIDDLE = registerBlock("christmas_tree_white_lights_middle",
-            () -> new ChristmasTreeMiddleBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
+            () -> new LightsChristmasTreeMiddleBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
 
     public static final RegistryObject<Block>   CHRISTMAS_TREE_WHITE_LIGHTS_TOP = registerBlock("christmas_tree_white_lights_top",
-            () -> new ChristmasTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
+            () -> new LightsChristmasTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
 
-    //CHRISTMAS TREE MULTI LIGHTS//
+    // MULTI LIGHTS//
     public static final RegistryObject<Block>   CHRISTMAS_TREE_MULTI_LIGHTS_BOTTOM = registerBlock("christmas_tree_multi_lights_bottom",
-            () -> new ChristmasTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
+            () -> new MultiChristmasTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
 
     public static final RegistryObject<Block>   CHRISTMAS_TREE_MULTI_LIGHTS_MIDDLE = registerBlock("christmas_tree_multi_lights_middle",
-            () -> new ChristmasTreeMiddleBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
+            () -> new MultiChristmasTreeMiddleBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
 
     public static final RegistryObject<Block>   CHRISTMAS_TREE_MULTI_LIGHTS_TOP = registerBlock("christmas_tree_multi_lights_top",
-            () -> new ChristmasTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
+            () -> new MultiChristmasTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
+
+
+
+    //DECORATED WITH ORNAMENTS, NO LIGHTS/
+    public static final RegistryObject<Block>   DECORATED_CHRISTMAS_TREE_BOTTOM = registerBlock("decorated_christmas_tree_bottom",
+            () -> new DecoratedTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().sound(SoundType.CROP)) , null);
+
+    public static final RegistryObject<Block>   DECORATED_CHRISTMAS_TREE_MIDDLE = registerBlock("decorated_christmas_tree_middle",
+            () -> new DecoratedTreeMiddleBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().sound(SoundType.CROP)) , null);
+
+    public static final RegistryObject<Block>   DECORATED_CHRISTMAS_TREE_TOP = registerBlock("decorated_christmas_tree_top",
+            () -> new DecoratedTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().sound(SoundType.CROP)) , null);
+
+    //DECORATED WITH WHITE ORNAMENTS, NO LIGHTS/
+    public static final RegistryObject<Block>   DECORATED_WHITE_CHRISTMAS_TREE_BOTTOM = registerBlock("decorated_white_christmas_tree_bottom",
+            () -> new DecoratedTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().sound(SoundType.CROP)) , null);
+
+    public static final RegistryObject<Block>   DECORATED_WHITE_CHRISTMAS_TREE_MIDDLE = registerBlock("decorated_white_christmas_tree_middle",
+            () -> new DecoratedTreeMiddleBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().sound(SoundType.CROP)) , null);
+
+    public static final RegistryObject<Block>   DECORATED_WHITE_CHRISTMAS_TREE_TOP = registerBlock("decorated_white_christmas_tree_top",
+            () -> new DecoratedTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().sound(SoundType.CROP)) , null);
+
+
+
+
+    //WHITE LIGHTS AND WHITE ORNAMENTS//
+    public static final RegistryObject<Block>   DECORATED_WHITE_LIGHTS_CHRISTMAS_TREE_BOTTOM = registerBlock("decorated_white_lights_christmas_tree_bottom",
+            () -> new DecoratedTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
+
+    public static final RegistryObject<Block>   DECORATED_WHITE_LIGHTS_CHRISTMAS_TREE_MIDDLE = registerBlock("decorated_white_lights_christmas_tree_middle",
+            () -> new DecoratedTreeMiddleBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
+
+    public static final RegistryObject<Block>   DECORATED_WHITE_LIGHTS_CHRISTMAS_TREE_TOP = registerBlock("decorated_white_lights_christmas_tree_top",
+            () -> new DecoratedTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
+
+
+    //WHITE LIGHTS AND COLORED ORNAMENTS//
+    public static final RegistryObject<Block>   DECORATED_LIGHTS_CHRISTMAS_TREE_BOTTOM = registerBlock("decorated_lights_christmas_tree_bottom",
+            () -> new DecoratedTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
+
+    public static final RegistryObject<Block>   DECORATED_LIGHTS_CHRISTMAS_TREE_MIDDLE = registerBlock("decorated_lights_christmas_tree_middle",
+            () -> new DecoratedTreeMiddleBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
+
+    public static final RegistryObject<Block>   DECORATED_LIGHTS_CHRISTMAS_TREE_TOP = registerBlock("decorated_lights_christmas_tree_top",
+            () -> new DecoratedTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
+
+    //MULTI LIGHTS AND WHITE ORNAMENTS//
+    public static final RegistryObject<Block>   DECORATED_WHITE_MULTI_CHRISTMAS_TREE_BOTTOM = registerBlock("decorated_white_multi_christmas_tree_bottom",
+            () -> new DecoratedTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
+
+    public static final RegistryObject<Block>   DECORATED_WHITE_MULTI_CHRISTMAS_TREE_MIDDLE = registerBlock("decorated_white_multi_christmas_tree_middle",
+            () -> new DecoratedTreeMiddleBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
+
+    public static final RegistryObject<Block>   DECORATED_WHITE_MULTI_CHRISTMAS_TREE_TOP = registerBlock("decorated_white_multi_christmas_tree_top",
+            () -> new DecoratedTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
+
+
+    //MULTI LIGHTS AND COLORED ORNAMENTS//
+    public static final RegistryObject<Block>   DECORATED_MULTI_CHRISTMAS_TREE_BOTTOM = registerBlock("decorated_multi_christmas_tree_bottom",
+            () -> new DecoratedTreeBottomBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
+
+    public static final RegistryObject<Block>   DECORATED_MULTI_CHRISTMAS_TREE_MIDDLE = registerBlock("decorated_multi_christmas_tree_middle",
+            () -> new DecoratedTreeMiddleBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
+
+    public static final RegistryObject<Block>   DECORATED_MULTI_CHRISTMAS_TREE_TOP = registerBlock("decorated_multi_christmas_tree_top",
+            () -> new DecoratedTreeTopBlock(BlockBehaviour.Properties.of(Material.PLANT).strength(2.0F).noOcclusion().lightLevel((p_50828_) -> { return 10; }).sound(SoundType.CROP)) , null);
+
+
 
 
     public static final RegistryObject<Block> MANTEL_DECO = registerBlock("mantel_deco",

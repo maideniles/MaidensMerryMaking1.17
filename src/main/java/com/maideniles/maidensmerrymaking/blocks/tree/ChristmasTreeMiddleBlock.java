@@ -38,6 +38,7 @@ public class ChristmasTreeMiddleBlock extends BushBlock {
         Block block = state.getBlock();
         return block == ModBlocks.CHRISTMAS_TREE_BOTTOM.get()
                 || block == ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_BOTTOM.get()
+                || block == ModBlocks.DECORATED_CHRISTMAS_TREE_BOTTOM.get()
                 || block == ModBlocks.CHRISTMAS_TREE_MULTI_LIGHTS_BOTTOM.get();
     }
 
@@ -91,6 +92,38 @@ public class ChristmasTreeMiddleBlock extends BushBlock {
                 level.setBlock(pos, ModBlocks.CHRISTMAS_TREE_MULTI_LIGHTS_MIDDLE.get().defaultBlockState(),3);
                    level.setBlock(pos.below(), ModBlocks.CHRISTMAS_TREE_MULTI_LIGHTS_BOTTOM.get().defaultBlockState(),3);
                      level.setBlock(pos.above(), ModBlocks.CHRISTMAS_TREE_MULTI_LIGHTS_TOP.get().defaultBlockState(),3);
+
+                tree.shrink(1);
+            }
+
+        }
+
+        if (!level.isClientSide()) {
+
+
+
+            if (tree.getItem() == ModItems.ORNAMENTS.get()){
+
+                System.out.println("O CHRISTMAS TREE, O CHRISTMAS TREE!");
+                level.setBlock(pos.below(), ModBlocks.DECORATED_CHRISTMAS_TREE_BOTTOM.get().defaultBlockState(),3);
+                level.setBlock(pos, ModBlocks.DECORATED_CHRISTMAS_TREE_MIDDLE.get().defaultBlockState(),3);
+                level.setBlock(pos.above(), ModBlocks.DECORATED_CHRISTMAS_TREE_TOP.get().defaultBlockState(),3);
+
+                tree.shrink(1);
+            }
+
+        }
+
+        if (!level.isClientSide()) {
+
+
+
+            if (tree.getItem() == ModItems.ORNAMENTS_WHITE.get()){
+
+                System.out.println("O CHRISTMAS TREE, O CHRISTMAS TREE!");
+                level.setBlock(pos.below(), ModBlocks.DECORATED_WHITE_CHRISTMAS_TREE_BOTTOM.get().defaultBlockState(),3);
+                level.setBlock(pos, ModBlocks.DECORATED_WHITE_CHRISTMAS_TREE_MIDDLE.get().defaultBlockState(),3);
+                level.setBlock(pos.above(), ModBlocks.DECORATED_WHITE_CHRISTMAS_TREE_TOP.get().defaultBlockState(),3);
 
                 tree.shrink(1);
             }

@@ -1,7 +1,9 @@
 {
 	"replace": false,
 	"entries": [
-		"maidensmerrymaking:spruce_leaves_drop_tiny_sapling"
+		"maidensmerrymaking:spruce_leaves_drop_tiny_sapling",
+		"maidensmerrymaking:disc_in_igloo",
+		"maidensmerrymaking:disc_2_in_chests"
 
 	]
 

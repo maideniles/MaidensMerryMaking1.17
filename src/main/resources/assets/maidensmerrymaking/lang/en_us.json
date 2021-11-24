@@ -41,6 +41,12 @@
 "item.maidensmerrymaking.ginger_tuber": "Ginger Tuber",
 "item.maidensmerrymaking.mint_leaf": "Mint Leaf",
 
+"item.maidensmerrymaking.christmas_music_disc": "Holiday",
+"item.maidensmerrymaking.christmas_music_disc.desc": "Holiday Music Mix (Various Artists)",
+
+"item.maidensmerrymaking.christmas_music_disc_2": "Lofi Holiday",
+"item.maidensmerrymaking.christmas_music_disc_2.desc": "Assortment of Holiday Songs by LofiGeek",
+
 "item.maidensmerrymaking.ground_ginger": "Ground Ginger",
 "item.maidensmerrymaking.gingerbread_dough": "Gingerbread Dough",
 "item.maidensmerrymaking.cookie_dough": "Cookie Dough",

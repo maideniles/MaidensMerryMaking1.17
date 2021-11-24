@@ -4,6 +4,7 @@ import com.maideniles.maidensmerrymaking.client.RenderLayers;
 import com.maideniles.maidensmerrymaking.init.ModBlocks;
 import com.maideniles.maidensmerrymaking.init.ModFeatures;
 import com.maideniles.maidensmerrymaking.init.ModItems;
+import com.maideniles.maidensmerrymaking.init.ModSoundEvents;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.IEventBus;
@@ -31,6 +32,7 @@ public class MaidensMerryMaking {
         ModBlocks.register(eventBus);
         RenderLayers.safeRunClient();
         ModFeatures.register(eventBus);
+        ModSoundEvents.register(eventBus);
 
 
         eventBus.addListener(this::setup);

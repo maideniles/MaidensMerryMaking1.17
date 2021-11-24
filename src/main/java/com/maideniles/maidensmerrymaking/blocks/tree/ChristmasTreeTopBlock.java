@@ -37,6 +37,7 @@ public class ChristmasTreeTopBlock extends BushBlock {
     protected boolean mayPlaceOn(BlockState state, BlockGetter level, BlockPos pos) {
         Block block = state.getBlock();
         return block == ModBlocks.CHRISTMAS_TREE_MIDDLE.get()
+                || block == ModBlocks.DECORATED_CHRISTMAS_TREE_MIDDLE.get()
                 || block == ModBlocks.CHRISTMAS_TREE_WHITE_LIGHTS_MIDDLE.get()
                 || block == ModBlocks.CHRISTMAS_TREE_MULTI_LIGHTS_MIDDLE.get();
     }
@@ -99,6 +100,38 @@ public class ChristmasTreeTopBlock extends BushBlock {
                    level.setBlock(pos.offset(0,-2,0), ModBlocks.CHRISTMAS_TREE_MULTI_LIGHTS_BOTTOM.get().defaultBlockState(),3);
 
                 tree.shrink(1);
+            }
+
+            if (!level.isClientSide()) {
+
+
+
+                if (tree.getItem() == ModItems.ORNAMENTS.get()){
+
+                    System.out.println("O CHRISTMAS TREE, O CHRISTMAS TREE!");
+                    level.setBlock(pos.below(2), ModBlocks.DECORATED_CHRISTMAS_TREE_BOTTOM.get().defaultBlockState(),3);
+                    level.setBlock(pos.below(), ModBlocks.DECORATED_CHRISTMAS_TREE_MIDDLE.get().defaultBlockState(),3);
+                    level.setBlock(pos, ModBlocks.DECORATED_CHRISTMAS_TREE_TOP.get().defaultBlockState(),3);
+
+                    tree.shrink(1);
+                }
+
+            }
+
+            if (!level.isClientSide()) {
+
+
+
+                if (tree.getItem() == ModItems.ORNAMENTS_WHITE.get()){
+
+                    System.out.println("O CHRISTMAS TREE, O CHRISTMAS TREE!");
+                    level.setBlock(pos.below(2), ModBlocks.DECORATED_WHITE_CHRISTMAS_TREE_BOTTOM.get().defaultBlockState(),3);
+                    level.setBlock(pos.below(), ModBlocks.DECORATED_WHITE_CHRISTMAS_TREE_MIDDLE.get().defaultBlockState(),3);
+                    level.setBlock(pos, ModBlocks.DECORATED_WHITE_CHRISTMAS_TREE_TOP.get().defaultBlockState(),3);
+
+                    tree.shrink(1);
+                }
+
             }
 
             if (tree.getItem() == ModItems.STAR.get()){

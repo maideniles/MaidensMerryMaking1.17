@@ -2,12 +2,13 @@
 	"credit": "Made with Blockbench",
 	"textures": {
 		"1": "maidensmerrymaking:block/christmas_star",
-		"particle": "maidensmerrymaking:block/bow"
+		"particle": "maidensmerrymaking:block/christmas_star"
 	},
 	"elements": [
 		{
 			"from": [0.55, -3, 8],
 			"to": [16.55, 13, 8],
+			"shade": false,
 			"rotation": {"angle": 0, "axis": "y", "origin": [8.55, 9, 8]},
 			"faces": {
 				"north": {"uv": [16, 0, 0, 16], "texture": "#1"},
@@ -21,6 +22,7 @@
 		{
 			"from": [8.05, -3, -0.5],
 			"to": [8.05, 13, 15.5],
+			"shade": false,
 			"rotation": {"angle": 0, "axis": "y", "origin": [8.05, 9, 7.5]},
 			"faces": {
 				"north": {"uv": [0, 0, 16, 16], "texture": "#1"},

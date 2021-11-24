@@ -77,6 +77,38 @@ public class ChristmasTreeBottomBlock extends Block {
 
         }
 
+        if (!level.isClientSide()) {
+
+
+
+            if (tree.getItem() == ModItems.ORNAMENTS.get()){
+
+                System.out.println("O CHRISTMAS TREE, O CHRISTMAS TREE!");
+                level.setBlock(pos, ModBlocks.DECORATED_CHRISTMAS_TREE_BOTTOM.get().defaultBlockState(),3);
+                level.setBlock(pos.above(), ModBlocks.DECORATED_CHRISTMAS_TREE_MIDDLE.get().defaultBlockState(),3);
+                level.setBlock(pos.above(2), ModBlocks.DECORATED_CHRISTMAS_TREE_TOP.get().defaultBlockState(),3);
+
+                tree.shrink(1);
+            }
+
+        }
+
+        if (!level.isClientSide()) {
+
+
+
+            if (tree.getItem() == ModItems.ORNAMENTS_WHITE.get()){
+
+                System.out.println("O CHRISTMAS TREE, O CHRISTMAS TREE!");
+                level.setBlock(pos, ModBlocks.DECORATED_WHITE_CHRISTMAS_TREE_BOTTOM.get().defaultBlockState(),3);
+                level.setBlock(pos.above(), ModBlocks.DECORATED_WHITE_CHRISTMAS_TREE_MIDDLE.get().defaultBlockState(),3);
+                level.setBlock(pos.above(2), ModBlocks.DECORATED_WHITE_CHRISTMAS_TREE_TOP.get().defaultBlockState(),3);
+
+                tree.shrink(1);
+            }
+
+        }
+
         return InteractionResult.PASS;
     }
 

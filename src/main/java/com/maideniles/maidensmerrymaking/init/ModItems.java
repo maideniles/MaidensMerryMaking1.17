@@ -7,6 +7,7 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.food.Foods;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraft.world.item.RecordItem;
 import net.minecraftforge.eventbus.api.IEventBus;
 import net.minecraftforge.fmllegacy.RegistryObject;
 import net.minecraftforge.registries.DeferredRegister;
@@ -30,6 +31,14 @@ public class ModItems {
     public static final RegistryObject<Item> ROOF_TILES= ITEMS.register( "roof_tiles",
             () -> new Item(new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
 
+    //MUSIC DISC//
+    public static final RegistryObject<Item> CHRISTMAS_DISC = ITEMS.register("christmas_music_disc",
+            () -> new RecordItem(1, () -> ModSoundEvents.CHRISTMAS_MUSIC_DISC.get(),
+                    new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
+
+    public static final RegistryObject<Item> CHRISTMAS_DISC_2 = ITEMS.register("christmas_music_disc_2",
+            () -> new RecordItem(1, () -> ModSoundEvents.CHRISTMAS_MUSIC_DISC_2.get(),
+                    new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
 
     //TOPPERS//
     public static final RegistryObject<Item> BOW= ITEMS.register( "bow",
@@ -80,6 +89,12 @@ public class ModItems {
             () -> new Item(new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
 
     public static final RegistryObject<Item> TWINKLING_LIGHTS_MULTI = ITEMS.register("twinkling_lights_multi",
+            () -> new Item(new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
+
+    public static final RegistryObject<Item> ORNAMENTS = ITEMS.register("ornaments",
+            () -> new Item(new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
+
+    public static final RegistryObject<Item> ORNAMENTS_WHITE = ITEMS.register("ornaments_white",
             () -> new Item(new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
 
 
@@ -169,6 +184,8 @@ public class ModItems {
 
     public static final RegistryObject<Item> BOTTLE_OF_MINT = ITEMS.register("bottle_of_mint",
             () -> new MintBottleItem(new Item.Properties().tab(ModItemGroups.MAIDENS_ITEMS_GROUP)));
+
+
 
 
 

@@ -1,10 +1,10 @@
 {
 	"credit": "Made with Blockbench",
 	"textures": {
-		"0": "maidensmerrymaking:block/leaves_white_lights_spruce",
+		"0": "maidensmerrymaking:block/leaves_white_lights_spruce_full",
 		"1": "maidensmerrymaking:block/water",
 		"2": "maidensmerrymaking:block/green_wire",
-		"particle": "maidensmerrymaking:block/leaves_white_lights_spruce",
+		"particle": "maidensmerrymaking:block/leaves_white_lights_spruce_full",
 		"1_2": "block/spruce_log"
 	},
 	"elements": [

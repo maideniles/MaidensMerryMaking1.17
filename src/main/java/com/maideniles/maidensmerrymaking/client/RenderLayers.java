@@ -383,6 +383,37 @@ public class RenderLayers {
         ItemBlockRenderTypes.setRenderLayer(ModBlocks.SPRUCE_LEAVES_LIGHTS_LARGE_MULTI.get(), RenderType.cutoutMipped());
 
 
+        //DECORATED CHRISTMAS TREES//
+
+        //COLORFUL//
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECORATED_CHRISTMAS_TREE_BOTTOM.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECORATED_CHRISTMAS_TREE_MIDDLE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECORATED_CHRISTMAS_TREE_TOP.get(), RenderType.cutoutMipped());
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECORATED_LIGHTS_CHRISTMAS_TREE_BOTTOM.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECORATED_LIGHTS_CHRISTMAS_TREE_MIDDLE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECORATED_LIGHTS_CHRISTMAS_TREE_TOP.get(), RenderType.cutoutMipped());
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECORATED_MULTI_CHRISTMAS_TREE_BOTTOM.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECORATED_MULTI_CHRISTMAS_TREE_MIDDLE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECORATED_MULTI_CHRISTMAS_TREE_TOP.get(), RenderType.cutoutMipped());
+
+        //TRADITIONAL//
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECORATED_WHITE_LIGHTS_CHRISTMAS_TREE_BOTTOM.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECORATED_WHITE_LIGHTS_CHRISTMAS_TREE_MIDDLE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECORATED_WHITE_LIGHTS_CHRISTMAS_TREE_TOP.get(), RenderType.cutoutMipped());
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECORATED_WHITE_CHRISTMAS_TREE_BOTTOM.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECORATED_WHITE_CHRISTMAS_TREE_MIDDLE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECORATED_WHITE_CHRISTMAS_TREE_TOP.get(), RenderType.cutoutMipped());
+
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECORATED_WHITE_MULTI_CHRISTMAS_TREE_BOTTOM.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECORATED_WHITE_MULTI_CHRISTMAS_TREE_MIDDLE.get(), RenderType.cutoutMipped());
+        ItemBlockRenderTypes.setRenderLayer(ModBlocks.DECORATED_WHITE_MULTI_CHRISTMAS_TREE_TOP.get(), RenderType.cutoutMipped());
+
+
+
+
 
 
 
